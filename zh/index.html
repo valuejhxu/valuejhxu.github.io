@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head>
+	<meta name="generator" content="Hugo 0.145.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <!-- head.html --><!-- meta.html -->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keeper</title>
+<meta name="author" content="Your Name">
+<meta name="description" content="My Personal Blog built with Hugo and Hugo-Brewm theme" >
+<meta name="keywords" content="home">
+<link rel="canonical" href="http://localhost:1313/zh/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/en/" title="English"><link rel="alternate" hreflang="id" href="http://localhost:1313/id/" title="Bahasa Indonesia"><link rel="alternate" hreflang="it" href="http://localhost:1313/it/" title="Italian">
+
+
+    
+    <!-- twitterCard -->
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Keeper" />
+    <meta name="twitter:description" content="My Personal Blog built with Hugo and Hugo-Brewm theme" />
+        <meta name="twitter:image" content="https://repository-images.githubusercontent.com/923527728/46a32a19-69ac-45b3-91a4-c4d299fb234b" />
+    
+    <!-- openGraph -->
+    <meta property="og:title" content="Keeper" />
+    <meta property="og:description" content="My Personal Blog built with Hugo and Hugo-Brewm theme" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://localhost:1313/zh/" />
+        <meta property="og:image" content="https://repository-images.githubusercontent.com/923527728/46a32a19-69ac-45b3-91a4-c4d299fb234b" />
+    <meta property="og:site_name" content="Keeper" /><link rel="alternate" type="application/rss+xml" href="http://localhost:1313/zh/index.xml" title="Keeper" />
+    <!-- js.html -->
+    <script src="http://localhost:1313/js/hugo-brewm.min.js" defer></script><!-- css.html -->
+    <link rel="stylesheet" href="http://localhost:1313/css/hugo-brewm.min.css">
+    <!-- css/inline.html -->
+    <style>
+         
+        body {max-width: 786px; margin: auto; padding: 2rem;}
+        img {max-width: 86vw;}
+    </style>
+    <!-- list.html [head] -->
+        <style>
+            body{margin:auto!important;max-width:2560px!important}body>footer.pagewidth,body>header.pagewidth{padding:0 calc(1.5rem + 1ex)}body>aside.carousel{position:sticky;position:-webkit-sticky;left:0;float:left;padding:1rem;width:38vw;height:var(--vbody)}body>main#home{height:var(--vbody);overflow-y:auto}body>main#home>aside#list-tags{top:0;right:0;margin:1rem auto;width:calc(100% - var(--golden-ratio))}#home #top{padding:0 1rem}#home #list-posts{padding:1rem;width:var(--golden-ratio)}div[role="feed"]{padding:1ex}.carousel .feed-item,#home .feed-item,hr.ldots{width:unset}#main-footer>.pagewidth{padding:0 1ex}#i18n-menu>.on-plank,#more-menu>.on-plank,.pagefind-ui{margin-right:1rem}#has-search-fallback.pagewidth{padding-right:1rem}#grain{display:none}@media only screen and (max-width:960px){body>footer,body>header{background:var(--bg)}body>aside.carousel{float:unset;margin:0 1rem;padding:1rem 0;width:unset}body>main#home{height:unset;overflow-y:unset}aside + main#home{margin-top:var(--vhead)}body>main#home>aside#list-tags{top:var(--vhead)}}@media only screen and (max-width:640px){#main-footer>.pagewidth{padding:0 calc(var(--void) / 2)}body>main#home>aside#list-tags,#home #list-posts{margin:var(--bigskip) auto;padding:0 var(--void);width:var(--golden-ratio)}#list-posts .section-title{padding-left:unset}div[role="feed"]{padding:0}.form.on-plank,.pagefind-ui{margin-right:1ex}}
+            .carousel__viewport__slide__cover{flex:1 1 40%;padding:1.5rem 0 5rem 1.5rem;height:100%;max-height:1024px}.carousel__viewport__slide__content{margin-bottom:auto;padding:0 2rem;width:100%;max-height:calc(100% - 5rem);overflow-y:auto}.carousel__viewport__slide__content h1.section-title{margin:0 !important;padding:var(--smallskip) 0 1ex;font:italic var(--Large) var(--rm), serif}.carousel__viewport__slide__content h2{font-size:var(--large)}.carousel__viewport__slide__content h3{font-size:var(--normalsize)}.carousel__viewport__slide__content p{max-width:var(--canonic)}.carousel__viewport__slide__content .footnotes p{max-width:unset}.carousel__viewport__slide__cover + .carousel__viewport__slide__content{flex:1 1 60%;margin-bottom:5rem}.carousel__viewport__slide__cover + .carousel__viewport__slide__content p{width:unset}.carousel__viewport__slide__cover img{border-radius:1ex;width:100%;height:100%;object-fit:cover}.carousel__viewport__slide > nav a{text-transform:uppercase;letter-spacing:0.1em;color:var(--fg)}@media only screen and (max-width: 960px){aside.carousel{width:unset}}@media only screen and (max-width: 640px){.carousel__nav{right:0;bottom:0;background:var(--bg);width:unset}.carousel__viewport__slide > .carousel__nav{position:sticky;position:-webkit-sticky;width:100%}aside .carousel__viewport > div,aside .carousel__viewport > section,aside .carousel__viewport__slide{flex-direction:column;justify-content:end;height:100%;overflow-y:auto}.carousel__viewport__slide__cover{padding:unset;height:unset}.carousel__viewport__slide__cover img{position:absolute;left:0;max-width:100%;height:calc(100% - 3rem)}.carousel__viewport__slide__content{padding:0 1rem 5rem;max-height:unset}.carousel__viewport__slide__cover + .carousel__viewport__slide__content{flex:unset;z-index:0;margin:1rem 1rem 4rem;border-radius:1ex;background:var(--bg);padding:1rem;width:auto}.carousel__viewport__slide__cover + .carousel__viewport__slide__content.white{background:none;color:#fff}.carousel__viewport__slide__cover + .carousel__viewport__slide__content.black{background:none;color:#000}.carousel__nav > ul.rounded{padding:1ex 0;width:calc(100vw - 2rem);text-align:right}}
+        </style>
+</head>
+<body >
+    <!-- header.html -->
+<header class="pagewidth">
+    <div id="background-header" class="background" aria-hidden="true"></div>
+    
+    <nav aria-label="Bypass">
+        <a id="to-content" class="underline" href="#list-posts" aria-label="Skip to Main Content">
+            <span>Skip to Main Content</span>
+            <kbd class="key" aria-hidden="true">c</kbd>
+            <span class="screening" aria-hidden="true"></span>
+        </a>
+    </nav>
+    
+        <a id="logo" href="http://localhost:1313/zh/" aria-label="Keeper">
+                <!-- logotype.html --><svg id="logotype" xmlns="http://www.w3.org/2000/svg" version="1.1" width="168pt">
+            <text id="logotype__text" y="19.5pt" x="0">Keeper</text>
+        </svg>
+        </a>
+    
+    <details class="presentation" id="top-nav">
+        <summary class="on-deck">
+            <span class="t t2">Navigation</span>
+            <span class="menu-icon" role="presentation"></span>
+        </summary>
+        <nav tabindex="-1" aria-label="Top">
+            <!-- menu.html -->
+            <!-- search.html -->
+<details id="has-search" class="presentation js-details" name="on-deck">
+    <summary class="on-deck" accesskey="q" aria-keyshortcuts="q">
+        <span class="t t2">Search</span>
+    </summary>
+    
+        <!-- pagefind.html -->
+    <div id="search" class="on-hull">
+        <div role="presentation" class="screening js-cgpn"></div>
+    </div>
+    <script src="http://localhost:1313/pagefind/pagefind-ui.js" type="text/javascript"></script>
+    <script>
+        let pageFindInitialized = false;
+        const initPageFind = function(event) {
+            if (!pageFindInitialized) {
+                new PagefindUI({
+                    element: "#search",
+                    showImages: false,
+                    translations: {
+                        placeholder: "Search"
+                    }
+                });
+                pageFindInitialized = true;
+                document.removeEventListener('DOMContentLoaded', initPageFind);
+            }
+        };
+        document.addEventListener('DOMContentLoaded', initPageFind);
+    </script>
+        <noscript id="has-search-fallback" class="on-hull">
+                
+    <!-- duckduckgo.html -->
+    <form id="duckduckgo" class="form on-plank"
+        name="x" action="//duckduckgo.com/"
+        role="search" aria-label="[i18n] searchDuckDuckGo">
+        <input type="hidden" value="localhost:1313" name="sites"></input>
+        <input type="hidden" value="1" name="kh"></input>
+        <input type="hidden" value="1" name="kn"></input>
+        <input type="hidden" value="1" name="kac"></input>
+        <input class="ldots form__input" type="search" placeholder="Search" name="q"></input>
+        <button class="form__button" type="submit" aria-label="Search">
+            <img src="https://duckduckgo.com/assets/logo_header.v109.svg" alt="" role="presentation" aria-hidden="true">
+        </button>
+    </form>
+    <div role="presentation" class="screening js-cgpn"></div>
+        </noscript>
+    
+</details>
+            <!-- menu.html -->
+            <!-- i18n.html -->
+
+        <details id="has-i18n" class="presentation js-details" name="on-deck">
+            <summary class="anchor on-deck" aria-label="Language Selections">
+            
+                <img
+                    src="https://raw.githubusercontent.com/lipis/flag-icons/c95b262e5ee2366cad4c5aecc4a5ad86220c9ab9/flags/4x3/cn.svg" alt=""
+                    width="64" height="48"
+                    loading="lazy"
+                    >
+                <span class="iso639" aria-hidden="true">ZH</span>
+                <span class="languangeName">简体中文</span>
+            
+            </summary>
+
+            <!-- on hull -->
+            <nav id="i18n-menu" aria-label="Language Selections">
+                <ul class="on-plank">
+                    <li>
+                        <a href="http://localhost:1313/en/" aria-label="Change language to English">
+                            <img
+                                src="https://raw.githubusercontent.com/lipis/flag-icons/c95b262e5ee2366cad4c5aecc4a5ad86220c9ab9/flags/4x3/gb.svg" alt=""
+                                width="64" height="48"
+                                aria-hidden="true"
+                                loading="lazy"
+                                >
+                            <span>English</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:1313/id/" aria-label="Change language to Bahasa Indonesia">
+                            <img
+                                src="https://raw.githubusercontent.com/lipis/flag-icons/c95b262e5ee2366cad4c5aecc4a5ad86220c9ab9/flags/4x3/id.svg" alt=""
+                                width="64" height="48"
+                                aria-hidden="true"
+                                loading="lazy"
+                                >
+                            <span>Bahasa Indonesia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:1313/it/" aria-label="Change language to Italian">
+                            <img
+                                src="https://raw.githubusercontent.com/lipis/flag-icons/c95b262e5ee2366cad4c5aecc4a5ad86220c9ab9/flags/4x3/it.svg" alt=""
+                                width="64" height="48"
+                                aria-hidden="true"
+                                loading="lazy"
+                                >
+                            <span>Italian</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="screening js-cgpn" role="presentation" aria-hidden="true"></div>
+            </nav>
+        </details>
+
+        </nav>
+        <div id="top-nav-screen" class="screening js-cpn" role="presentation" aria-hidden="true"></div>
+    </details>
+</header>
+    
+        <!-- carousel.html -->
+        <aside class="carousel">
+                <nav class="carousel__nav" aria-label="slides">
+                    <ul class="rounded invert" role="presentation">
+                            <li>
+                                <a href="#slide-1" role="button" aria-controls="slide-1">
+                                    <span>Valuejhxu</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#slide-2" role="button" aria-controls="slide-2">
+                                    <span>Hugo 发布新闻</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#slide-3" role="button" aria-controls="slide-3">
+                                    <span>图库</span>
+                                </a>
+                            </li>
+                    </ul>
+                </nav>
+
+            <div class="carousel__viewport">
+                    <section id="slide-1" class="carousel__viewport__slide"
+                        aria-labelledby="slide-1__heading">
+                        <div class="carousel__viewport__slide__cover">
+                            <img src="https://w.wallhaven.cc/full/l3/wallhaven-l3mw62.jpg"
+                                alt="" >
+                        </div>
+                        <div class="carousel__viewport__slide__content ">
+                                <h1 id="slide-1__heading" class="section-title">Valuejhxu</h1>
+                            <div>
+                                    <h2 id="个人简介">个人简介</h2>
+<p>热爱技术，专注于Web开发和技术写作。
+在这里分享我的技术见解和学习心得。</p>
+
+                            </div>
+                        </div>
+                    </section>
+                    <section id="slide-2" class="carousel__viewport__slide"
+                        aria-labelledby="slide-2__heading">
+                        <div class="carousel__viewport__slide__content ">
+                                <h1 id="slide-2__heading" class="section-title">Hugo 发布新闻</h1>
+                            <div>
+                                    <p>这是一个包含 RSS 订阅源的幻灯片。</p>
+
+        <div role="feed" aria-busy="false">
+                <article class="feed-item">
+                    <hgroup>
+                        <div><div><time datetime="Wed, 26 Feb 2025 16:00:08 &#43;0000">Wed, 26 Feb 2025</time></div>
+                        </div>
+                        <a href="https://github.com/gohugoio/hugo/releases/tag/v0.145.0"><h1>Release v0.145.0</h1></a>
+                    </hgroup>
+                    <a class="underline" href="https://github.com/gohugoio/hugo/releases/tag/v0.145.0" aria-label="Release v0.145.0"></a>
+                    
+                    <section >
+                        <div class="par"></div>
+                    </section>
+                </article><hr class="ldots" role="presentation" aria-hidden="true">
+                <article class="feed-item">
+                    <hgroup>
+                        <div><div><time datetime="Wed, 19 Feb 2025 12:57:23 &#43;0000">Wed, 19 Feb 2025</time></div>
+                        </div>
+                        <a href="https://github.com/gohugoio/hugo/releases/tag/v0.144.2"><h1>Release v0.144.2</h1></a>
+                    </hgroup>
+                    <a class="underline" href="https://github.com/gohugoio/hugo/releases/tag/v0.144.2" aria-label="Release v0.144.2"></a>
+                    
+                    <section >
+                        <div class="par"></div>
+                    </section>
+                </article><hr class="ldots" role="presentation" aria-hidden="true">
+                <article class="feed-item">
+                    <hgroup>
+                        <div><div><time datetime="Tue, 18 Feb 2025 12:32:04 &#43;0000">Tue, 18 Feb 2025</time></div>
+                        </div>
+                        <a href="https://github.com/gohugoio/hugo/releases/tag/v0.144.1"><h1>Release v0.144.1</h1></a>
+                    </hgroup>
+                    <a class="underline" href="https://github.com/gohugoio/hugo/releases/tag/v0.144.1" aria-label="Release v0.144.1"></a>
+                    
+                    <section >
+                        <div class="par"></div>
+                    </section>
+                </article><hr class="ldots" role="presentation" aria-hidden="true">
+                <article class="feed-item">
+                    <hgroup>
+                        <div><div><time datetime="Mon, 17 Feb 2025 16:40:24 &#43;0000">Mon, 17 Feb 2025</time></div>
+                        </div>
+                        <a href="https://github.com/gohugoio/hugo/releases/tag/v0.144.0"><h1>Release v0.144.0</h1></a>
+                    </hgroup>
+                    <a class="underline" href="https://github.com/gohugoio/hugo/releases/tag/v0.144.0" aria-label="Release v0.144.0"></a>
+                    
+                    <section >
+                        <div class="par"></div>
+                    </section>
+                </article><hr class="ldots" role="presentation" aria-hidden="true">
+                <article class="feed-item">
+                    <hgroup>
+                        <div><div><time datetime="Tue, 04 Feb 2025 09:16:02 &#43;0000">Tue, 04 Feb 2025</time></div>
+                        </div>
+                        <a href="https://github.com/gohugoio/hugo/releases/tag/v0.143.1"><h1>Release v0.143.1</h1></a>
+                    </hgroup>
+                    <a class="underline" href="https://github.com/gohugoio/hugo/releases/tag/v0.143.1" aria-label="Release v0.143.1"></a>
+                    
+                    <section >
+                        <div class="par"></div>
+                    </section>
+                </article><hr class="ldots" role="presentation" aria-hidden="true">
+                <article class="feed-item">
+                    <hgroup>
+                        <div><div><time datetime="Sat, 01 Feb 2025 16:10:20 &#43;0000">Sat, 01 Feb 2025</time></div>
+                        </div>
+                        <a href="https://github.com/gohugoio/hugo/releases/tag/v0.143.0"><h1>Release v0.143.0</h1></a>
+                    </hgroup>
+                    <a class="underline" href="https://github.com/gohugoio/hugo/releases/tag/v0.143.0" aria-label="Release v0.143.0"></a>
+                    
+                    <section >
+                        <div class="par"></div>
+                    </section>
+                </article><hr class="ldots" role="presentation" aria-hidden="true">
+                <article class="feed-item">
+                    <hgroup>
+                        <div><div><time datetime="Wed, 22 Jan 2025 12:37:07 &#43;0000">Wed, 22 Jan 2025</time></div>
+                        </div>
+                        <a href="https://github.com/gohugoio/hugo/releases/tag/v0.142.0"><h1>Release v0.142.0</h1></a>
+                    </hgroup>
+                    <a class="underline" href="https://github.com/gohugoio/hugo/releases/tag/v0.142.0" aria-label="Release v0.142.0"></a>
+                    
+                    <section >
+                        <div class="par"></div>
+                    </section>
+                </article><hr class="ldots" role="presentation" aria-hidden="true">
+                <article class="feed-item">
+                    <hgroup>
+                        <div><div><time datetime="Thu, 16 Jan 2025 13:28:56 &#43;0000">Thu, 16 Jan 2025</time></div>
+                        </div>
+                        <a href="https://github.com/gohugoio/hugo/releases/tag/v0.141.0"><h1>Release v0.141.0</h1></a>
+                    </hgroup>
+                    <a class="underline" href="https://github.com/gohugoio/hugo/releases/tag/v0.141.0" aria-label="Release v0.141.0"></a>
+                    
+                    <section >
+                        <div class="par"></div>
+                    </section>
+                </article><hr class="ldots" role="presentation" aria-hidden="true">
+                <article class="feed-item">
+                    <hgroup>
+                        <div><div><time datetime="Mon, 30 Dec 2024 15:33:58 &#43;0000">Mon, 30 Dec 2024</time></div>
+                        </div>
+                        <a href="https://github.com/gohugoio/hugo/releases/tag/v0.140.2"><h1>Release v0.140.2</h1></a>
+                    </hgroup>
+                    <a class="underline" href="https://github.com/gohugoio/hugo/releases/tag/v0.140.2" aria-label="Release v0.140.2"></a>
+                    
+                    <section >
+                        <div class="par"></div>
+                    </section>
+                </article><hr class="ldots" role="presentation" aria-hidden="true">
+                <article class="feed-item">
+                    <hgroup>
+                        <div><div><time datetime="Mon, 23 Dec 2024 16:41:07 &#43;0000">Mon, 23 Dec 2024</time></div>
+                        </div>
+                        <a href="https://github.com/gohugoio/hugo/releases/tag/v0.140.1"><h1>Release v0.140.1</h1></a>
+                    </hgroup>
+                    <a class="underline" href="https://github.com/gohugoio/hugo/releases/tag/v0.140.1" aria-label="Release v0.140.1"></a>
+                    
+                    <section >
+                        <div class="par"></div>
+                    </section>
+                </article>
+        </div>
+
+                            </div>
+                        </div>
+                    </section>
+                    <section id="slide-3" class="carousel__viewport__slide"
+                        aria-labelledby="slide-3__heading">
+                        <div class="carousel__viewport__slide__content ">
+                                <h1 id="slide-3__heading" class="section-title">图库</h1>
+                            <div>
+                                    <p>这是一个使用 <code>{{&lt; pin &gt;}}</code> 短代码的幻灯片。</p>
+<h2 id="作品展示示例">作品展示（示例）</h2>
+<p>使用 <code>Pin</code> 短代码的区块。
+项目按列排序显示。
+如果图片不是正方形，布局将以瀑布流方式显示。</p>
+<p><div class="column pin">
+
+
+        <figure>
+            <img src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/1.svg" alt="项目 1" loading="lazy">
+                <figcaption>
+                    项目 1
+                </figcaption>
+        </figure>
+
+
+        <figure>
+            <img src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/2.svg" alt="项目 2" loading="lazy">
+                <figcaption>
+                    项目 2
+                </figcaption>
+        </figure>
+
+
+        <figure>
+            <img src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/3.svg" alt="项目 3" loading="lazy">
+                <figcaption>
+                    项目 3
+                </figcaption>
+        </figure>
+
+
+        <figure>
+            <img src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/4.svg" alt="项目 4" loading="lazy">
+                <figcaption>
+                    项目 4
+                </figcaption>
+        </figure>
+
+
+        <figure>
+            <img src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/5.svg" alt="项目 5" loading="lazy">
+                <figcaption>
+                    项目 5
+                </figcaption>
+        </figure>
+
+
+        <figure>
+            <img src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/6.svg" alt="项目 6" loading="lazy">
+                <figcaption>
+                    项目 6
+                </figcaption>
+        </figure>
+
+</div></p>
+<h2 id="产品目录示例">产品目录（示例）</h2>
+<p>带有 <code>quote</code> 参数的 <code>{{&lt; pin &gt;}}</code> 短代码。</p>
+<p><div class="column pin">
+
+
+        <a href="#%e5%95%86%e5%9f%8e" class="has-img has-aria-label has-quote"
+             aria-label="产品 1">
+            <div><s>￥299</s> ￥199</div>
+             <img src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/7.svg" alt="产品 1" loading="lazy">
+        </a>
+
+
+        <a href="#%e5%95%86%e5%9f%8e" class="has-img has-aria-label has-quote"
+             aria-label="产品 2">
+            <div><s>￥399</s> ￥299</div>
+             <img src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/8.svg" alt="产品 2" loading="lazy">
+        </a>
+
+
+        <a href="#%e5%95%86%e5%9f%8e" class="has-img has-aria-label has-quote"
+             aria-label="产品 3">
+            <div>获取报价</div>
+             <img src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/9.svg" alt="产品 3" loading="lazy">
+        </a>
+
+
+        <a href="#%e5%95%86%e5%9f%8e" class="has-img has-aria-label has-quote"
+             aria-label="产品 4">
+            <div><s>￥299</s> ￥199</div>
+             <img src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/10.svg" alt="产品 4" loading="lazy">
+        </a>
+
+
+        <a href="#%e5%95%86%e5%9f%8e" class="has-img has-aria-label has-quote"
+             aria-label="产品 5">
+            <div><s>￥399</s> ￥299</div>
+             <img src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/11.svg" alt="产品 5" loading="lazy">
+        </a>
+
+
+        <a href="#%e5%95%86%e5%9f%8e" class="has-img has-aria-label has-quote"
+             aria-label="产品 6">
+            <div>缺货</div>
+             <img src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/12.svg" alt="产品 6" loading="lazy">
+        </a>
+
+</div></p>
+
+                            </div>
+                        </div>
+                    </section>
+            </div>
+        </aside>
+    <!-- [main] baseof.html -->
+    <main id="home">
+        <!-- main/header.html -->
+        <div id="top" role="presentation">
+            
+                    <!-- listing.html -->
+                    <!-- listing.html -->
+        <div id="list-categories" class="carousel">
+            <header class="section-title">Categories</header>
+            <!-- taxonomies.html -->
+        <ul class="carousel__viewport" role="presentation">
+            
+                    <li  style="background-image:url(https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/19.svg);">
+                        <a href="http://localhost:1313/zh/categories/blog/"
+                            aria-label="Category:Blog"
+                            data-post-counter="1"
+                            >
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                    <li  style="background-image:url(https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/17.svg);">
+                        <a href="http://localhost:1313/zh/categories/develop/"
+                            aria-label="Category:Develop"
+                            data-post-counter="1"
+                            >
+                            <span>Develop</span>
+                        </a>
+                    </li>
+                    <li  style="background-image:url(https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/12.svg);">
+                        <a href="http://localhost:1313/zh/categories/other/"
+                            aria-label="Category:Other"
+                            data-post-counter="1"
+                            >
+                            <span>Other</span>
+                        </a>
+                    </li>
+        </ul>
+        </div>
+                
+    <!-- hero.html -->
+    <div class="hero">
+        <div class="hero__image  auto ">
+                <img src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/22.svg" alt=""/>
+        </div>
+        <div class="hero__content"><h2 id="欢迎来到我的博客">欢迎来到我的博客</h2>
+<p>欢迎来到我的个人博客！这里是我分享想法、经验和知识的地方。我会定期更新各种有趣的内容，包括技术文章、个人感悟和有趣的发现。</p>
+<p>这个博客使用 Hugo 搭建，采用了优雅的 hugo-brewm 主题。在这里，你可以找到各种分类的文章，包括技术教程、个人随笔、项目分享等。希望这些内容能为你带来价值和启发。</p>
+<p>&mdash; valuejhxu</p>
+
+        </div>
+    </div>
+
+        </div>
+        
+            <aside id="list-tags">
+                <header class="section-title">
+                    <strong>Discover Topics</strong>
+                </header>
+                <nav aria-label="Discover Topics">
+                    <!-- taxonomies.html -->
+        <ul class="rounded has-hash" role="presentation">
+            
+                    <li  >
+                        <a href="http://localhost:1313/zh/tags/hugo/"
+                            aria-label="Tag:Hugo"
+                            data-post-counter="2"
+                            >
+                            <span>Hugo</span>
+                        </a>
+                    </li>
+                    <li  >
+                        <a href="http://localhost:1313/zh/tags/blog/"
+                            aria-label="Tag:Blog"
+                            data-post-counter="1"
+                            >
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                    <li  >
+                        <a href="http://localhost:1313/zh/tags/develop/"
+                            aria-label="Tag:Develop"
+                            data-post-counter="1"
+                            >
+                            <span>Develop</span>
+                        </a>
+                    </li>
+                    <li  >
+                        <a href="http://localhost:1313/zh/tags/django/"
+                            aria-label="Tag:Django"
+                            data-post-counter="1"
+                            >
+                            <span>Django</span>
+                        </a>
+                    </li>
+                    <li  >
+                        <a href="http://localhost:1313/zh/tags/python/"
+                            aria-label="Tag:Python"
+                            data-post-counter="1"
+                            >
+                            <span>Python</span>
+                        </a>
+                    </li>
+                    <li  >
+                        <a href="http://localhost:1313/zh/tags/%E5%85%A5%E9%97%A8/"
+                            aria-label="Tag:入门"
+                            data-post-counter="1"
+                            >
+                            <span>入门</span>
+                        </a>
+                    </li>
+        </ul>
+                </nav>
+                <a class="underline" href="http://localhost:1313/zh/tags/">Explore more topics</a>
+            </aside>
+    
+        
+            <section id="list-posts" class="pagewidth">
+                <header  class="section-title">
+                    <strong>
+                                Recent Posts
+                    </strong>
+                </header>
+                    <div role="feed" aria-busy="false">
+                        <article class="feed-item"
+        aria-posinset="1"
+        aria-setsize="3"
+        aria-labelledby="title-1"
+        aria-describedby="desc-1">
+        <hgroup>
+            <div>
+                <span>
+                                <a href="http://localhost:1313/zh/author/valuejhxu/">Valuejhxu</a>
+                        <span>in</span>
+                            <!-- terms.html -->
+    <ul class="inline" role="presentation">
+            <li><a href="http://localhost:1313/zh/categories/blog/">Blog</a></li>
+    </ul>
+                        
+                </span>
+                
+                <!-- timestamp.html-->
+    <div >
+        <time class="doc-publish-date" datetime="2024-03-23T00:00:00&#43;00:00" data-time-label="Published on">2024年3月23日</time>
+    </div>
+            </div>
+            <a href="http://localhost:1313/zh/post/blog/hugo/" tabindex="-1">
+                <h1 id="title-1">Hugo</h1>
+            </a>
+        </hgroup>
+        <a class="underline" href="http://localhost:1313/zh/post/blog/hugo/" aria-label="Hugo"></a>
+        
+        <section class="has-cover">
+                <img class="flowlines" src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/12.svg" alt="" style="object-position: 33% 72%" loading="lazy">
+            <div class="par" id="desc-1">something to add.
+
+            </div>
+        </section>
+        <footer>
+            <span class="readingTime">1 min read
+            </span>
+            
+                <!-- terms.html -->
+    <ul class="rounded invert ldots" role="presentation">
+            <li><a href="http://localhost:1313/zh/tags/blog/">Blog</a></li>
+            <li><a href="http://localhost:1313/zh/tags/hugo/">Hugo</a></li>
+    </ul>
+        </footer>
+    </article><hr class="ldots" role="presentation" aria-hidden="true">
+                        <article class="feed-item"
+        aria-posinset="2"
+        aria-setsize="3"
+        aria-labelledby="title-2"
+        aria-describedby="desc-2">
+        <hgroup>
+            <div>
+                <span>
+                                <a href="http://localhost:1313/zh/author/valuejhxu/">Valuejhxu</a>
+                        <span>in</span>
+                            <!-- terms.html -->
+    <ul class="inline" role="presentation">
+            <li><a href="http://localhost:1313/zh/categories/develop/">Develop</a></li>
+    </ul>
+                        
+                </span>
+                
+                <!-- timestamp.html-->
+    <div >
+        <time class="doc-publish-date" datetime="2024-03-21T00:00:00&#43;00:00" data-time-label="Published on">2024年3月21日</time>
+    </div>
+            </div>
+            <a href="http://localhost:1313/zh/post/develop/django%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/" tabindex="-1">
+                <h1 id="title-2">Django项目部署</h1>
+            </a>
+        </hgroup>
+        <a class="underline" href="http://localhost:1313/zh/post/develop/django%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/" aria-label="Django项目部署"></a>
+        
+        <section class="has-cover">
+                <img class="flowlines" src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/21.svg" alt="" style="object-position: 53% 55%" loading="lazy">
+            <div class="par" id="desc-2">something to add.
+
+            </div>
+        </section>
+        <footer>
+            <span class="readingTime">1 min read
+            </span>
+            
+                <!-- terms.html -->
+    <ul class="rounded invert ldots" role="presentation">
+            <li><a href="http://localhost:1313/zh/tags/python/">Python</a></li>
+            <li><a href="http://localhost:1313/zh/tags/django/">Django</a></li>
+            <li><a href="http://localhost:1313/zh/tags/develop/">Develop</a></li>
+    </ul>
+        </footer>
+    </article><hr class="ldots" role="presentation" aria-hidden="true">
+                        <article class="feed-item"
+        aria-posinset="3"
+        aria-setsize="3"
+        aria-labelledby="title-3"
+        aria-describedby="desc-3">
+        <hgroup>
+            <div>
+                <span>
+                                <a href="http://localhost:1313/zh/author/valuejhxu/">Valuejhxu</a>
+                        <span>in</span>
+                            <!-- terms.html -->
+    <ul class="inline" role="presentation">
+            <li><a href="http://localhost:1313/zh/categories/other/">Other</a></li>
+    </ul>
+                        
+                </span>
+                
+                <!-- timestamp.html-->
+    <div >
+        <time class="doc-publish-date" datetime="2024-03-19T00:00:00&#43;00:00" data-time-label="Published on">2024年3月19日</time>
+    </div>
+            </div>
+            <a href="http://localhost:1313/zh/post/other/first-post/" tabindex="-1">
+                <h1 id="title-3">我的第一篇博客</h1>
+            </a>
+        </hgroup>
+        <a class="underline" href="http://localhost:1313/zh/post/other/first-post/" aria-label="我的第一篇博客"></a>
+        
+        <section class="has-cover">
+                <img class="flowlines" src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/14.svg" alt="" style="object-position: 53% 67%" loading="lazy">
+            <div class="par" id="desc-3">开始写博客 欢迎来到我的第一篇博客文章！在这里，我想分享一下使用 Hugo 搭建个人博客的经验。
+为什么选择 Hugo？ Hugo 是一个非常快速的静态网站生成器，它有以下优点：
+极快的构建速度 简单的配置过程 丰富的主题选择 强大的内容管理能力 我的博客计划 在未来，我计划发布以下类型的内容：
+技术教程和经验分享 个人项目展示 学习笔记和心得 有趣的技术发现 示例代码 这是一个简单的 Python 代码示例：
+1 2 3 4 def hello_world(): print(&#34;欢迎访问我的博客！&#34;) hello_world() 感谢你的阅读，希望未来能为大家带来更多有价值的内容！
+
+            </div>
+        </section>
+        <footer>
+            <span class="readingTime">1 min read
+            </span>
+            
+                <!-- terms.html -->
+    <ul class="rounded invert ldots" role="presentation">
+            <li><a href="http://localhost:1313/zh/tags/hugo/">Hugo</a></li>
+            <li><a href="http://localhost:1313/zh/tags/%E5%85%A5%E9%97%A8/">入门</a></li>
+    </ul>
+        </footer>
+    </article>
+                    </div>
+                    
+            </section>
+        <!-- main/footer.html -->
+    <hr class="hide">
+        <footer id="main-footer">
+            <div class="column column--multicols pagewidth" style="--multicols: 2"><div id="main-footer-primary"
+                        aria-labelledby="footer-1">
+                        <p><strong class="section-title">Valuejhxu <i class="icon copyleft"></i> 2024</strong></p>
+<p>保留部分权利。</p>
+<br>
+<strong class="section-title">版权说明</strong>
+<p>除特别注明外，本站内容采用 Creative Commons 许可协议。</p>
+
+                    </div>
+                <div id="main-footer-secondary" class="column" style="--col: 15rem">
+                        <div id="coffee-counter">
+                            <strong class="section-title">Coffee Stat</strong>
+                            <p>Making this website has taken at least 4 cups of coffee, if not more.</p>
+                        </div>                    
+                    <!-- menu.html -->
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!-- footer.html -->
+<footer id="body-footer" class="pagewidth" style="display: none;">
+    <div id="background-footer" class="background" role="presentation"></div>
+    <!-- focusMode.html -->
+    <div id="focusMode" class="hide">
+        <input
+            id="defocusAuxElement"
+            accesskey="d" type="checkbox"
+            onclick="focusMode()"
+            aria-keyshortcuts="d"
+            aria-label="Focus Mode"
+            >
+            <label id="focusModeButton" for="defocusAuxElement" aria-label="Focus Mode">
+                ⦿ <span class="t" role="tooltip">Focus Mode</span>
+            </label>
+    </div>
+    <!-- a11y.html --><details id="has-a11y" class="presentation js-details" name="on-deck" aria-haspopup="true" aria-labelledby="has-a11y-summary">
+    <summary id="has-a11y-summary" accesskey="a" aria-keyshortcuts="a">
+        <span>&nbsp;Accessibility</span>
+        <kbd class="key" aria-hidden="true">a</kbd>
+    </summary>
+    <!-- a11y console -->
+    <fieldset id="a11y" role="region" disabled>
+        <!-- brightness & contrast -->
+        <div id="setColorScheme" role="group" aria-label="Color Settings">
+            <!-- darkMode.html -->
+    <input
+        id="lightSwitch"
+        type="checkbox"
+        onclick="setColor()"
+        aria-label="Dark Mode"
+        >
+        <label for="lightSwitch">
+            <div class="has-aria-label off" role="status" aria-label="Light"></div>
+            <div class="has-aria-label on" role="status" aria-label="Dark"></div>
+            <div id="lightSwitchIndicator" aria-hidden="true"></div>
+        </label>
+            <!-- contrast.html -->
+    <fieldset id="setContrast">
+        <legend>Contrast</legend>
+        <input
+            id="lessContrast"
+            type="radio" name="setContrast" value="less"
+            onclick="setColor()"
+            >
+            <label for="lessContrast">
+                <span>Low</span>
+            </label>
+        <input
+            id="defaultContrast"
+            type="radio" name="setContrast" value="default"
+            onclick="setColor()"
+            >
+            <label for="defaultContrast">
+                <span>Default</span>
+            </label>
+        <input
+            id="moreContrast"
+            type="radio" name="setContrast" value="more"
+            onclick="setColor()"
+            >
+            <label for="moreContrast">
+                <span>High</span>
+            </label>
+    </fieldset>
+        </div>
+        <!-- colorPalette.html -->
+    <div id="setColorPalette" style="display:none;">
+        <label for="colorPalette">Color Palette</label>
+        <select id="colorPalette" name="colorPalette" oninput="setColorPalette()" aria-label="Color Palette">
+            <option value="defaultColor">Default</option>
+            <option value="deuteranopia">Deuteranopia</option>
+            <option value="protanopia">Protanopia</option>
+            <option value="tritanopia">Tritanopia</option>
+            <option value="monochrome">Monochrome</option>
+        </select>
+    </div>
+        <!-- fontsize.html -->
+    <div class="has-aria-label-top" aria-label="Font Size">
+        <label class="range" for="fontSize" aria-label="Font Size">
+            <input
+                id="fontSize"
+                type="range" min="8" max="12" step="0.5"
+                oninput="setFontSize()">
+            <output
+                id="fontSizeState"
+                onclick="resetFontSize()"
+                aria-live="polite"
+                >10</output>
+        </label>
+    </div>
+        <!-- baselineStretch.html -->
+    <div id="setBaselineStretch" class="has-aria-label-top" aria-label="Baseline Stretch">
+        <label class="range" for="baselineStretch">
+            <input
+                id="baselineStretch"
+                type="range" min="0.8" max="1.2" step="0.05"
+                oninput="setStretch()"
+                >
+            <output
+                id="baselineStretchState"
+                onclick="resetStretch()"
+                aria-live="polite"
+                >1</output>
+        </label>
+    </div>
+        <!-- OpenDyslexic.html -->
+    <div id="setOpenDyslexic">
+        <input
+            id="OpenDyslexic"
+            type="checkbox"
+            onclick="useOpenDyslexic()"
+            aria-label="Use OpenDyslexic Font"
+            >
+            <label
+                class="has-aria-label-top"
+                for="OpenDyslexic"
+                aria-label="Use OpenDyslexic Font"
+                >
+                <span id="OpenDyslexicState" aria-hidden="true">
+                    <span id="OpenDyslexicIndicator"></span>
+                </span>
+            </label>
+    </div>
+        <!-- menu.html -->
+    <menu
+        id="a11y-menu"
+        class="hide"
+        role="toolbar"
+        aria-label="Accessibility Menu Controls"
+        >
+        <button
+            id="saveButton" class="reverse"
+            onclick="saveA11y()"
+            disabled>Save
+        </button>
+        <button
+            id="resetButton" class="has-aria-label"
+            onclick="resetA11y()"
+            aria-label="Reset"
+            disabled>
+        </button>
+        <button
+            id="closeButton" class="has-aria-label"
+            onclick="closeA11yConsole()"
+            aria-label="Close"
+            >
+        </button>
+    </menu>
+        <noscript>
+            <center id="noScript" role="alert">Uh-oh... Javascript is disabled!</center>
+        </noscript>
+        <center id="noLocalStorage" class="hide" role="alert">LocalStorage is not available in your browser. Settings won&#39;t be saved.</center>
+    </fieldset>
+    <div class="screening js-cpn" role="presentation" aria-hidden="true"></div>
+</details>
+
+
+    <!-- bionread.html -->
+    <div id="useBionRead" class="hide">
+        <input
+            id="bionReadSwitch"
+            accesskey="b" type="checkbox"
+            onclick="bionRead()"
+            aria-keyshortcuts="b"
+            aria-label="BionRead Mode"
+            >
+            <label id="bionReadButton" for="bionReadSwitch">
+                <span><strong>Bion</strong>Read</span>
+                <kbd class="key" aria-hidden="true">b</kbd>
+            </label>
+    </div>
+    <!-- [top] bypass block -->
+    <nav aria-label="Bypass">
+        <a id="to-top" href="#top" title="To Content Top" accesskey="c" aria-keyshortcuts="c" aria-label="To Content Top">
+            <kbd class="key" aria-hidden="true">c</kbd>
+        </a>
+    </nav>
+</footer>
+
+    
+    <!-- [background] baseof.html -->
+    <div id="background-body"
+        role="presentation">
+        <div id="grain" hidden></div>
+        <div id="dwclock" hidden>
+            <div id="min">
+                <div class="hand"></div>
+            </div>
+            <div id="hour">
+                <div class="hand"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

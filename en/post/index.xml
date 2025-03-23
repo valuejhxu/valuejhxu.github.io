@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Post on Keeper</title>
+    <link>http://localhost:1313/en/post/</link>
+    <description>Recent Posts in Post on Keeper</description>
+    <generator>Hugo 0.145.0</generator>
+    <language>en-GB</language>
+    <managingEditor>Your Name</managingEditor>
+    
+      <webMaster>Your Name</webMaster>
+    <copyright>Copyright 2024</copyright>
+    <lastBuildDate>Sun, 23 Mar 2025 21:16:29 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Authoring Cover Images and Audio Articles</title>
+      <link>http://localhost:1313/en/post/authoring-cover-images-and-audio-article/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/en/post/authoring-cover-images-and-audio-article/</guid>
+      <description>&lt;p&gt;This section demonstrates a list view layout.&#xA;The post listing style can be modified by adjusting the sitemap changeFreq parameter to values like &amp;ldquo;always&amp;rdquo;, &amp;ldquo;hourly&amp;rdquo;, &amp;ldquo;daily&amp;rdquo;, or &amp;ldquo;weekly&amp;rdquo;.&#xA;This section has been set up with the following configuration:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;---&#xA;title: &amp;quot;Post&amp;quot;&#xA;translationKey: post&#xA;sitemap:&#xA;    changeFreq: &amp;quot;always&amp;quot;&#xA;---&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      <enclosure url="https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_and_styrofoam_%E2%80%93_electrostatic_charge_%28235112299%29.jpg" length="0" type="image/jpeg" />
+    </item>
+    <item>
+      <title>Authoring Terms Entry</title>
+      <link>http://localhost:1313/en/post/authoring-terms-entry/</link>
+      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/en/post/authoring-terms-entry/</guid>
+      <description>&lt;p&gt;This section demonstrates a list view layout.&#xA;The post listing style can be modified by adjusting the sitemap changeFreq parameter to values like &amp;ldquo;always&amp;rdquo;, &amp;ldquo;hourly&amp;rdquo;, &amp;ldquo;daily&amp;rdquo;, or &amp;ldquo;weekly&amp;rdquo;.&#xA;This section has been set up with the following configuration:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;---&#xA;title: &amp;quot;Post&amp;quot;&#xA;translationKey: post&#xA;sitemap:&#xA;    changeFreq: &amp;quot;always&amp;quot;&#xA;---&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    <item>
+      <title>Authoring The Redaction History</title>
+      <link>http://localhost:1313/en/post/authoring-redaction-history/</link>
+      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/en/post/authoring-redaction-history/</guid>
+      <description>&lt;p&gt;This section demonstrates a list view layout.&#xA;The post listing style can be modified by adjusting the sitemap changeFreq parameter to values like &amp;ldquo;always&amp;rdquo;, &amp;ldquo;hourly&amp;rdquo;, &amp;ldquo;daily&amp;rdquo;, or &amp;ldquo;weekly&amp;rdquo;.&#xA;This section has been set up with the following configuration:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;---&#xA;title: &amp;quot;Post&amp;quot;&#xA;translationKey: post&#xA;sitemap:&#xA;    changeFreq: &amp;quot;always&amp;quot;&#xA;---&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    <item>
+      <title>Configure Discussion</title>
+      <link>http://localhost:1313/en/post/configure-discussion/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/en/post/configure-discussion/</guid>
+      <description>&lt;p&gt;This section demonstrates a list view layout.&#xA;The post listing style can be modified by adjusting the sitemap changeFreq parameter to values like &amp;ldquo;always&amp;rdquo;, &amp;ldquo;hourly&amp;rdquo;, &amp;ldquo;daily&amp;rdquo;, or &amp;ldquo;weekly&amp;rdquo;.&#xA;This section has been set up with the following configuration:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;---&#xA;title: &amp;quot;Post&amp;quot;&#xA;translationKey: post&#xA;sitemap:&#xA;    changeFreq: &amp;quot;always&amp;quot;&#xA;---&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    <item>
+      <title>Configure Homepage Slides</title>
+      <link>http://localhost:1313/en/post/configure-slides/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/en/post/configure-slides/</guid>
+      <description>&lt;p&gt;This section demonstrates a list view layout.&#xA;The post listing style can be modified by adjusting the sitemap changeFreq parameter to values like &amp;ldquo;always&amp;rdquo;, &amp;ldquo;hourly&amp;rdquo;, &amp;ldquo;daily&amp;rdquo;, or &amp;ldquo;weekly&amp;rdquo;.&#xA;This section has been set up with the following configuration:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;---&#xA;title: &amp;quot;Post&amp;quot;&#xA;translationKey: post&#xA;sitemap:&#xA;    changeFreq: &amp;quot;always&amp;quot;&#xA;---&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    <item>
+      <title>Configure Logo and Accent Color</title>
+      <link>http://localhost:1313/en/post/configure-logo-and-accent-color/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/en/post/configure-logo-and-accent-color/</guid>
+      <description>&lt;p&gt;This section demonstrates a list view layout.&#xA;The post listing style can be modified by adjusting the sitemap changeFreq parameter to values like &amp;ldquo;always&amp;rdquo;, &amp;ldquo;hourly&amp;rdquo;, &amp;ldquo;daily&amp;rdquo;, or &amp;ldquo;weekly&amp;rdquo;.&#xA;This section has been set up with the following configuration:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;---&#xA;title: &amp;quot;Post&amp;quot;&#xA;translationKey: post&#xA;sitemap:&#xA;    changeFreq: &amp;quot;always&amp;quot;&#xA;---&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    <item>
+      <title>Configure Main Footer</title>
+      <link>http://localhost:1313/en/post/configure-main-footer/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/en/post/configure-main-footer/</guid>
+      <description>&lt;p&gt;This section demonstrates a list view layout.&#xA;The post listing style can be modified by adjusting the sitemap changeFreq parameter to values like &amp;ldquo;always&amp;rdquo;, &amp;ldquo;hourly&amp;rdquo;, &amp;ldquo;daily&amp;rdquo;, or &amp;ldquo;weekly&amp;rdquo;.&#xA;This section has been set up with the following configuration:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;---&#xA;title: &amp;quot;Post&amp;quot;&#xA;translationKey: post&#xA;sitemap:&#xA;    changeFreq: &amp;quot;always&amp;quot;&#xA;---&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    <item>
+      <title>Configure Menu</title>
+      <link>http://localhost:1313/en/post/configure-menu/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/en/post/configure-menu/</guid>
+      <description>&lt;p&gt;This section demonstrates a list view layout.&#xA;The post listing style can be modified by adjusting the sitemap changeFreq parameter to values like &amp;ldquo;always&amp;rdquo;, &amp;ldquo;hourly&amp;rdquo;, &amp;ldquo;daily&amp;rdquo;, or &amp;ldquo;weekly&amp;rdquo;.&#xA;This section has been set up with the following configuration:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;---&#xA;title: &amp;quot;Post&amp;quot;&#xA;translationKey: post&#xA;sitemap:&#xA;    changeFreq: &amp;quot;always&amp;quot;&#xA;---&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    <item>
+      <title>Configure Pagefind</title>
+      <link>http://localhost:1313/en/post/configure-pagefind/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/en/post/configure-pagefind/</guid>
+      <description>&lt;p&gt;This section demonstrates a list view layout.&#xA;The post listing style can be modified by adjusting the sitemap changeFreq parameter to values like &amp;ldquo;always&amp;rdquo;, &amp;ldquo;hourly&amp;rdquo;, &amp;ldquo;daily&amp;rdquo;, or &amp;ldquo;weekly&amp;rdquo;.&#xA;This section has been set up with the following configuration:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;---&#xA;title: &amp;quot;Post&amp;quot;&#xA;translationKey: post&#xA;sitemap:&#xA;    changeFreq: &amp;quot;always&amp;quot;&#xA;---&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    <item>
+      <title>Markdown Test</title>
+      <link>http://localhost:1313/en/post/markdown-test/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/en/post/markdown-test/</guid>
+      <description>&lt;p&gt;This section demonstrates a list view layout.&#xA;The post listing style can be modified by adjusting the sitemap changeFreq parameter to values like &amp;ldquo;always&amp;rdquo;, &amp;ldquo;hourly&amp;rdquo;, &amp;ldquo;daily&amp;rdquo;, or &amp;ldquo;weekly&amp;rdquo;.&#xA;This section has been set up with the following configuration:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;---&#xA;title: &amp;quot;Post&amp;quot;&#xA;translationKey: post&#xA;sitemap:&#xA;    changeFreq: &amp;quot;always&amp;quot;&#xA;---&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    <item>
+      <title>Getting Started with Docker: A Beginner&#39;s Guide</title>
+      <link>http://localhost:1313/en/post/getting-started-with-docker/</link>
+      <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/en/post/getting-started-with-docker/</guid>
+      <description>&lt;p&gt;This section demonstrates a list view layout.&#xA;The post listing style can be modified by adjusting the sitemap changeFreq parameter to values like &amp;ldquo;always&amp;rdquo;, &amp;ldquo;hourly&amp;rdquo;, &amp;ldquo;daily&amp;rdquo;, or &amp;ldquo;weekly&amp;rdquo;.&#xA;This section has been set up with the following configuration:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;---&#xA;title: &amp;quot;Post&amp;quot;&#xA;translationKey: post&#xA;sitemap:&#xA;    changeFreq: &amp;quot;always&amp;quot;&#xA;---&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    <item>
+      <title>10 Python Tips and Tricks to Write Better Code</title>
+      <link>http://localhost:1313/en/post/python-tips-and-tricks/</link>
+      <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/en/post/python-tips-and-tricks/</guid>
+      <description>&lt;p&gt;This section demonstrates a list view layout.&#xA;The post listing style can be modified by adjusting the sitemap changeFreq parameter to values like &amp;ldquo;always&amp;rdquo;, &amp;ldquo;hourly&amp;rdquo;, &amp;ldquo;daily&amp;rdquo;, or &amp;ldquo;weekly&amp;rdquo;.&#xA;This section has been set up with the following configuration:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;---&#xA;title: &amp;quot;Post&amp;quot;&#xA;translationKey: post&#xA;sitemap:&#xA;    changeFreq: &amp;quot;always&amp;quot;&#xA;---&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    <item>
+      <title>Modern Web Development: Tools and Best Practices</title>
+      <link>http://localhost:1313/en/post/modern-web-development/</link>
+      <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/en/post/modern-web-development/</guid>
+      <description>&lt;p&gt;This section demonstrates a list view layout.&#xA;The post listing style can be modified by adjusting the sitemap changeFreq parameter to values like &amp;ldquo;always&amp;rdquo;, &amp;ldquo;hourly&amp;rdquo;, &amp;ldquo;daily&amp;rdquo;, or &amp;ldquo;weekly&amp;rdquo;.&#xA;This section has been set up with the following configuration:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;---&#xA;title: &amp;quot;Post&amp;quot;&#xA;translationKey: post&#xA;sitemap:&#xA;    changeFreq: &amp;quot;always&amp;quot;&#xA;---&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    <item>
+      <title>Introduction to Machine Learning with Python</title>
+      <link>http://localhost:1313/en/post/introduction-to-machine-learning/</link>
+      <pubDate>Sat, 16 Mar 2024 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/en/post/introduction-to-machine-learning/</guid>
+      <description>&lt;p&gt;This section demonstrates a list view layout.&#xA;The post listing style can be modified by adjusting the sitemap changeFreq parameter to values like &amp;ldquo;always&amp;rdquo;, &amp;ldquo;hourly&amp;rdquo;, &amp;ldquo;daily&amp;rdquo;, or &amp;ldquo;weekly&amp;rdquo;.&#xA;This section has been set up with the following configuration:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;---&#xA;title: &amp;quot;Post&amp;quot;&#xA;translationKey: post&#xA;sitemap:&#xA;    changeFreq: &amp;quot;always&amp;quot;&#xA;---&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    <item>
+      <title>A Guide to Contributing to Open Source Projects</title>
+      <link>http://localhost:1313/en/post/contributing-to-open-source/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/en/post/contributing-to-open-source/</guid>
+      <description>&lt;p&gt;This section demonstrates a list view layout.&#xA;The post listing style can be modified by adjusting the sitemap changeFreq parameter to values like &amp;ldquo;always&amp;rdquo;, &amp;ldquo;hourly&amp;rdquo;, &amp;ldquo;daily&amp;rdquo;, or &amp;ldquo;weekly&amp;rdquo;.&#xA;This section has been set up with the following configuration:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;---&#xA;title: &amp;quot;Post&amp;quot;&#xA;translationKey: post&#xA;sitemap:&#xA;    changeFreq: &amp;quot;always&amp;quot;&#xA;---&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    <item>
+      <title>Hugo-Tufte Features compatibility</title>
+      <link>http://localhost:1313/en/post/tufte-features/</link>
+      <pubDate>Sat, 20 Feb 2016 13:56:01 -0800</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/en/post/tufte-features/</guid>
+      <description>&lt;p&gt;This section demonstrates a list view layout.&#xA;The post listing style can be modified by adjusting the sitemap changeFreq parameter to values like &amp;ldquo;always&amp;rdquo;, &amp;ldquo;hourly&amp;rdquo;, &amp;ldquo;daily&amp;rdquo;, or &amp;ldquo;weekly&amp;rdquo;.&#xA;This section has been set up with the following configuration:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;---&#xA;title: &amp;quot;Post&amp;quot;&#xA;translationKey: post&#xA;sitemap:&#xA;    changeFreq: &amp;quot;always&amp;quot;&#xA;---&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+  </channel>
+</rss>

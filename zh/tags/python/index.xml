@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Keeper</title>
+    <link>http://localhost:1313/zh/tags/python/</link>
+    <description>Recent Posts in Python on Keeper</description>
+    <generator>Hugo 0.145.0</generator>
+    <language>zh-CN</language>
+    <managingEditor>Your Name</managingEditor>
+    
+      <webMaster>Your Name</webMaster>
+    <copyright>Copyright 2024</copyright>
+    <lastBuildDate>Sun, 23 Mar 2025 21:16:29 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/zh/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Django项目部署</title>
+      <link>http://localhost:1313/zh/post/develop/django%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Thu, 21 Mar 2024 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/zh/post/develop/django%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/</guid>
+      <description></description>
+      
+    </item>
+  </channel>
+</rss>

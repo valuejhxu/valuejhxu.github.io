@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Keeper</title>
+    <link>http://localhost:1313/en/tags/python/</link>
+    <description>Recent Posts in Python on Keeper</description>
+    <generator>Hugo 0.145.0</generator>
+    <language>en-GB</language>
+    <managingEditor>Your Name</managingEditor>
+    
+      <webMaster>Your Name</webMaster>
+    <copyright>Copyright 2024</copyright>
+    <lastBuildDate>Sun, 23 Mar 2025 21:16:29 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>10 Python Tips and Tricks to Write Better Code</title>
+      <link>http://localhost:1313/en/post/python-tips-and-tricks/</link>
+      <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/en/post/python-tips-and-tricks/</guid>
+      <description></description>
+      
+    </item>
+    <item>
+      <title>Introduction to Machine Learning with Python</title>
+      <link>http://localhost:1313/en/post/introduction-to-machine-learning/</link>
+      <pubDate>Sat, 16 Mar 2024 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/en/post/introduction-to-machine-learning/</guid>
+      <description></description>
+      
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Keeper</title>
+    <link>http://localhost:1313/zh/</link>
+    <description>Recent Posts on Keeper</description>
+    <generator>Hugo 0.145.0</generator>
+    <language>zh-CN</language>
+    <managingEditor>Your Name</managingEditor>
+    
+      <webMaster>Your Name</webMaster>
+    <copyright>Copyright 2024</copyright>
+    <lastBuildDate>Sun, 23 Mar 2025 21:16:29 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/zh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>http://localhost:1313/zh/post/blog/hugo/</link>
+      <pubDate>Sat, 23 Mar 2024 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/zh/post/blog/hugo/</guid>
+      <description>&lt;h2 id=&#34;欢迎来到我的博客&#34;&gt;欢迎来到我的博客&lt;/h2&gt;&#xA;&lt;p&gt;欢迎来到我的个人博客！这里是我分享想法、经验和知识的地方。我会定期更新各种有趣的内容，包括技术文章、个人感悟和有趣的发现。&lt;/p&gt;&#xA;&lt;p&gt;这个博客使用 Hugo 搭建，采用了优雅的 hugo-brewm 主题。在这里，你可以找到各种分类的文章，包括技术教程、个人随笔、项目分享等。希望这些内容能为你带来价值和启发。&lt;/p&gt;&#xA;&lt;p&gt;&amp;mdash; valuejhxu&lt;/p&gt;</description>
+      
+    </item>
+    <item>
+      <title>Django项目部署</title>
+      <link>http://localhost:1313/zh/post/develop/django%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Thu, 21 Mar 2024 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/zh/post/develop/django%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/</guid>
+      <description>&lt;h2 id=&#34;欢迎来到我的博客&#34;&gt;欢迎来到我的博客&lt;/h2&gt;&#xA;&lt;p&gt;欢迎来到我的个人博客！这里是我分享想法、经验和知识的地方。我会定期更新各种有趣的内容，包括技术文章、个人感悟和有趣的发现。&lt;/p&gt;&#xA;&lt;p&gt;这个博客使用 Hugo 搭建，采用了优雅的 hugo-brewm 主题。在这里，你可以找到各种分类的文章，包括技术教程、个人随笔、项目分享等。希望这些内容能为你带来价值和启发。&lt;/p&gt;&#xA;&lt;p&gt;&amp;mdash; valuejhxu&lt;/p&gt;</description>
+      
+    </item>
+    <item>
+      <title>我的第一篇博客</title>
+      <link>http://localhost:1313/zh/post/other/first-post/</link>
+      <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
+      <author>Your Name</author>
+      <guid>http://localhost:1313/zh/post/other/first-post/</guid>
+      <description>&lt;h2 id=&#34;欢迎来到我的博客&#34;&gt;欢迎来到我的博客&lt;/h2&gt;&#xA;&lt;p&gt;欢迎来到我的个人博客！这里是我分享想法、经验和知识的地方。我会定期更新各种有趣的内容，包括技术文章、个人感悟和有趣的发现。&lt;/p&gt;&#xA;&lt;p&gt;这个博客使用 Hugo 搭建，采用了优雅的 hugo-brewm 主题。在这里，你可以找到各种分类的文章，包括技术教程、个人随笔、项目分享等。希望这些内容能为你带来价值和启发。&lt;/p&gt;&#xA;&lt;p&gt;&amp;mdash; valuejhxu&lt;/p&gt;</description>
+      
+    </item>
+  </channel>
+</rss>
