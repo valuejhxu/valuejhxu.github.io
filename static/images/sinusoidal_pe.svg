@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1060" height="990" viewBox="0 0 1060 990" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text { font-family: "SimSun", "Times New Roman", serif; font-size: 13px; }
+    .title { font-size: 18px; font-weight: bold; }
+    .subtitle { font-size: 15px; font-weight: bold; }
+    .formula { font-family: "Times New Roman", serif; font-style: italic; font-size: 14px; }
+    .token { font-size: 12px; text-anchor: middle; }
+    .dimension { font-size: 11px; text-anchor: end; }
+    .value { font-size: 11px; text-anchor: middle; }
+    .axis-label { font-size: 12px; }
+    .caption { font-size: 11.5px; }
+    .dim-label { font-size: 10px; }
+    .dimension-arrow { stroke: #666; stroke-width: 1; fill: none; marker-end: url(#arrowhead); }
+    .seq-arrow { stroke: #666; stroke-width: 1; fill: none; marker-end: url(#arrowhead); }
+    .highlight-box { fill: none; stroke: #ff5722; stroke-width: 1.5; stroke-dasharray: 5,3; }
+    .calculation { font-size: 12px; }
+    .calc-subtitle { font-size: 14px; font-weight: bold; }
+    .calc-formula { font-family: "Times New Roman", serif; font-style: italic; font-size: 13px; }
+    .calc-value { font-weight: bold; }
+    .calc-pos { fill: #ff5722; font-weight: bold; }
+  </style>
+  
+  <!-- 定义箭头标记 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1060" height="990" fill="#ffffff" />
+  
+  <!-- 标题 -->
+  <text x="530" y="30" text-anchor="middle" class="title">Transformer 位置编码原理</text>
+  
+  <!-- 左侧 - 编码矩阵 -->
+  <g transform="translate(70, 70)">
+    <!-- 子标题：词嵌入 -->
+    <text x="0" y="0" class="subtitle">词嵌入矩阵 (Input Embeddings)</text>
+
+    <!-- 词嵌入矩阵 - 4词 x 4维 -->
+    <g transform="translate(0, 25)">
+      <!-- 矩阵框架 -->
+      <rect x="0" y="0" width="260" height="120" fill="#e1f3fd" stroke="#666" stroke-width="1" />
+
+      <!-- 垂直分隔线 -->
+      <line x1="65" y1="0" x2="65" y2="120" stroke="#666" stroke-width="0.5" stroke-dasharray="3,2" />
+      <line x1="130" y1="0" x2="130" y2="120" stroke="#666" stroke-width="0.5" stroke-dasharray="3,2" />
+      <line x1="195" y1="0" x2="195" y2="120" stroke="#666" stroke-width="0.5" stroke-dasharray="3,2" />
+      
+      <!-- 水平分隔线 -->
+      <line x1="0" y1="30" x2="260" y2="30" stroke="#666" stroke-width="0.5" stroke-dasharray="3,2" />
+      <line x1="0" y1="60" x2="260" y2="60" stroke="#666" stroke-width="0.5" stroke-dasharray="3,2" />
+      <line x1="0" y1="90" x2="260" y2="90" stroke="#666" stroke-width="0.5" stroke-dasharray="3,2" />
+      
+      <!-- Token标签 -->
+      <text x="32.5" y="-10" class="token">Token 1</text>
+      <text x="97.5" y="-10" class="token">Token 2</text>
+      <text x="162.5" y="-10" class="token">Token 3</text>
+      <text x="227.5" y="-10" class="token">Token 4</text>
+
+      <!-- Dimension标签 -->
+      <text x="-15" y="15" class="dimension">dim 0</text>
+      <text x="-15" y="45" class="dimension">dim 1</text>
+      <text x="-15" y="75" class="dimension">dim 2</text>
+      <text x="-15" y="105" class="dimension">dim 3</text>
+      
+      <!-- 词嵌入值 (示例值) -->
+      <text x="32.5" y="15" class="value">0.23</text>
+      <text x="32.5" y="45" class="value">-0.41</text>
+      <text x="32.5" y="75" class="value">0.78</text>
+      <text x="32.5" y="105" class="value">0.12</text>
+
+      <text x="97.5" y="15" class="value">0.65</text>
+      <text x="97.5" y="45" class="value">0.29</text>
+      <text x="97.5" y="75" class="value">-0.53</text>
+      <text x="97.5" y="105" class="value">0.34</text>
+
+      <text x="162.5" y="15" class="value">-0.18</text>
+      <text x="162.5" y="45" class="value">0.71</text>
+      <text x="162.5" y="75" class="value">0.44</text>
+      <text x="162.5" y="105" class="value">-0.65</text>
+
+      <text x="227.5" y="15" class="value">0.52</text>
+      <text x="227.5" y="45" class="value">-0.37</text>
+      <text x="227.5" y="75" class="value">0.22</text>
+      <text x="227.5" y="105" class="value">0.58</text>
+    </g>
+
+    <!-- 序列长度和嵌入维度标注 -->
+    <path d="M0,150 L260,150" class="seq-arrow" />
+    <text x="130" y="167" text-anchor="middle" class="caption">seq_len = 4</text>
+    
+    <path d="M-35,25 L-35,145" class="dimension-arrow" />
+    <text x="-55" y="85" text-anchor="middle" transform="rotate(-90, -55, 85)" class="caption">embedding_size = 4</text>
+
+    <!-- 加号 -->
+    <text x="300" y="85" font-size="24" text-anchor="middle">+</text>
+    
+    <!-- 子标题：位置编码 -->
+    <text x="430" y="0" class="subtitle">位置编码矩阵 (Positional Encodings)</text>
+
+    <!-- 位置编码矩阵 - 4词 x 4维 -->
+    <g transform="translate(350, 25)">
+      <!-- 矩阵框架 -->
+      <rect x="0" y="0" width="260" height="120" fill="#fff2dd" stroke="#666" stroke-width="1" />
+
+      <!-- 垂直分隔线 -->
+      <line x1="65" y1="0" x2="65" y2="120" stroke="#666" stroke-width="0.5" stroke-dasharray="3,2" />
+      <line x1="130" y1="0" x2="130" y2="120" stroke="#666" stroke-width="0.5" stroke-dasharray="3,2" />
+      <line x1="195" y1="0" x2="195" y2="120" stroke="#666" stroke-width="0.5" stroke-dasharray="3,2" />
+      
+      <!-- 水平分隔线 -->
+      <line x1="0" y1="30" x2="260" y2="30" stroke="#666" stroke-width="0.5" stroke-dasharray="3,2" />
+      <line x1="0" y1="60" x2="260" y2="60" stroke="#666" stroke-width="0.5" stroke-dasharray="3,2" />
+      <line x1="0" y1="90" x2="260" y2="90" stroke="#666" stroke-width="0.5" stroke-dasharray="3,2" />
+      
+      <!-- Position标签 -->
+      <text x="32.5" y="-10" class="token">pos=0</text>
+      <text x="97.5" y="-10" class="token">pos=1</text>
+      <text x="162.5" y="-10" class="token">pos=2</text>
+      <text x="227.5" y="-10" class="token">pos=3</text>
+
+      <!-- 位置编码值 -->
+      <text x="32.5" y="15" class="value">0.00</text>
+      <text x="32.5" y="45" class="value">1.00</text>
+      <text x="32.5" y="75" class="value">0.00</text>
+      <text x="32.5" y="105" class="value">1.00</text>
+
+      <text x="97.5" y="15" class="value">0.84</text>
+      <text x="97.5" y="45" class="value">0.54</text>
+      <text x="97.5" y="75" class="value">0.05</text>
+      <text x="97.5" y="105" class="value">0.99</text>
+
+      <text x="162.5" y="15" class="value">0.91</text>
+      <text x="162.5" y="45" class="value">-0.42</text>
+      <text x="162.5" y="75" class="value">0.10</text>
+      <text x="162.5" y="105" class="value">0.99</text>
+
+      <text x="227.5" y="15" class="value">0.14</text>
+      <text x="227.5" y="45" class="value">-0.99</text>
+      <text x="227.5" y="75" class="value">0.15</text>
+      <text x="227.5" y="105" class="value">0.99</text>
+      
+      <!-- 高亮框 pos=0 -->
+      <rect x="0" y="-15" width="65" height="145" class="highlight-box" />
+      <!-- 从pos=0列到计算过程的连接线 -->
+      <path d="M32.5,145 C32.5,250 32.5,350 100,550 C120,590 100,630 100,670" stroke="#ff5722" stroke-width="1.5" stroke-dasharray="5,3" fill="none" marker-end="url(#arrowhead)"/>
+      
+      <!-- 高亮框 pos=3 -->
+      <rect x="195" y="-15" width="65" height="145" class="highlight-box" />
+      <!-- 从pos=3列到计算过程的连接线 -->
+      <path d="M227.5,145 C227.5,250 227.5,350 400,550 C420,590 500,630 500,670" stroke="#ff5722" stroke-width="1.5" stroke-dasharray="5,3" fill="none" marker-end="url(#arrowhead)"/>
+    </g>
+
+    <!-- 序列长度和嵌入维度标注 -->
+    <path d="M350,150 L610,150" class="seq-arrow" />
+    <text x="480" y="167" text-anchor="middle" class="caption">seq_len = 4</text>
+    
+    <path d="M330,25 L330,145" class="dimension-arrow" />
+    <text x="310" y="85" text-anchor="middle" transform="rotate(-90, 310, 85)" class="caption">embedding_size = 4</text>
+
+    <!-- 等号 -->
+    <text x="640" y="85" font-size="24" text-anchor="middle">=</text>
+    
+    <!-- 流程箭头 -->
+    <path d="M630,90 C645,90 655,90 670,90" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)" />
+    
+    <!-- 子标题：最终输入表示 -->
+    <text x="770" y="0" class="subtitle">输入表示 (Input + Position)</text>
+
+    <!-- 最终表示矩阵 - 4词 x 4维 -->
+    <g transform="translate(680, 25)">
+      <!-- 矩阵框架 -->
+      <rect x="0" y="0" width="260" height="120" fill="#e8f4ea" stroke="#666" stroke-width="1" />
+
+      <!-- 垂直分隔线 -->
+      <line x1="65" y1="0" x2="65" y2="120" stroke="#666" stroke-width="0.5" stroke-dasharray="3,2" />
+      <line x1="130" y1="0" x2="130" y2="120" stroke="#666" stroke-width="0.5" stroke-dasharray="3,2" />
+      <line x1="195" y1="0" x2="195" y2="120" stroke="#666" stroke-width="0.5" stroke-dasharray="3,2" />
+      
+      <!-- 水平分隔线 -->
+      <line x1="0" y1="30" x2="260" y2="30" stroke="#666" stroke-width="0.5" stroke-dasharray="3,2" />
+      <line x1="0" y1="60" x2="260" y2="60" stroke="#666" stroke-width="0.5" stroke-dasharray="3,2" />
+      <line x1="0" y1="90" x2="260" y2="90" stroke="#666" stroke-width="0.5" stroke-dasharray="3,2" />
+      
+      <!-- 最终Token标签 -->
+      <text x="32.5" y="-10" class="token">Token 1</text>
+      <text x="97.5" y="-10" class="token">Token 2</text>
+      <text x="162.5" y="-10" class="token">Token 3</text>
+      <text x="227.5" y="-10" class="token">Token 4</text>
+
+      <!-- 最终值 (词嵌入 + 位置编码) -->
+      <text x="32.5" y="15" class="value">0.23</text>
+      <text x="32.5" y="45" class="value">0.59</text>
+      <text x="32.5" y="75" class="value">0.78</text>
+      <text x="32.5" y="105" class="value">1.12</text>
+
+      <text x="97.5" y="15" class="value">1.49</text>
+      <text x="97.5" y="45" class="value">0.83</text>
+      <text x="97.5" y="75" class="value">-0.48</text>
+      <text x="97.5" y="105" class="value">1.33</text>
+
+      <text x="162.5" y="15" class="value">0.73</text>
+      <text x="162.5" y="45" class="value">0.29</text>
+      <text x="162.5" y="75" class="value">0.54</text>
+      <text x="162.5" y="105" class="value">0.34</text>
+
+      <text x="227.5" y="15" class="value">0.66</text>
+      <text x="227.5" y="45" class="value">-1.36</text>
+      <text x="227.5" y="75" class="value">0.37</text>
+      <text x="227.5" y="105" class="value">1.57</text>
+    </g>
+
+    <!-- 序列长度和嵌入维度标注 -->
+    <path d="M680,150 L940,150" class="seq-arrow" />
+    <text x="810" y="167" text-anchor="middle" class="caption">seq_len = 4</text>
+    
+    <path d="M660,25 L660,145" class="dimension-arrow" />
+    <text x="640" y="85" text-anchor="middle" transform="rotate(-90, 640, 85)" class="caption">embedding_size = 4</text>
+    
+    <!-- 流程说明箭头 -->
+    <path d="M480,0 C480,-30 490,-45 550,-45 C610,-45 620,-30 620,0" stroke="#333" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="3,2" />
+    <text x="550" y="-50" text-anchor="middle" class="dim-label">由位置索引(pos)和维度(dim)计算</text>
+
+    <!-- 位置编码公式 -->
+    <g transform="translate(300, 190)">
+      <rect x="0" y="0" width="360" height="80" fill="#f5f5f5" stroke="#ccc" stroke-width="1" rx="5" ry="5" />
+      <text x="180" y="20" text-anchor="middle" class="subtitle">位置编码公式</text>
+      <text x="180" y="45" text-anchor="middle" class="formula">PE(pos, 2i) = sin(pos/10000^(2i/d_model))</text>
+      <text x="180" y="65" text-anchor="middle" class="formula">PE(pos, 2i+1) = cos(pos/10000^(2i/d_model))</text>
+    </g>
+    
+    <!-- 流程箭头从公式指向位置编码矩阵 -->
+    <path d="M370,190 C380,170 400,160 400,145" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)" />
+  </g>
+
+  <!-- 下方：位置编码的波形图示 -->
+  <g transform="translate(100, 410)">
+    <text x="380" y="0" text-anchor="middle" class="subtitle">位置编码波形可视化</text>
+    
+    <!-- 图形边框 -->
+    <rect x="0" y="20" width="760" height="220" fill="#fafafa" stroke="#ccc" stroke-width="1" />
+    
+    <!-- 坐标轴 -->
+    <line x1="40" y1="130" x2="740" y2="130" stroke="#333" stroke-width="1.5" /> <!-- X轴 -->
+    <line x1="40" y1="40" x2="40" y2="220" stroke="#333" stroke-width="1.5" /> <!-- Y轴 -->
+    
+    <!-- X轴刻度 -->
+    <line x1="90" y1="130" x2="90" y2="134" stroke="#333" stroke-width="1" />
+    <text x="90" y="148" text-anchor="middle" class="dim-label">pos=0</text>
+    <line x1="190" y1="130" x2="190" y2="134" stroke="#333" stroke-width="1" />
+    <text x="190" y="148" text-anchor="middle" class="dim-label">pos=4</text>
+    <line x1="290" y1="130" x2="290" y2="134" stroke="#333" stroke-width="1" />
+    <text x="290" y="148" text-anchor="middle" class="dim-label">pos=8</text>
+    <line x1="390" y1="130" x2="390" y2="134" stroke="#333" stroke-width="1" />
+    <text x="390" y="148" text-anchor="middle" class="dim-label">pos=12</text>
+    <line x1="490" y1="130" x2="490" y2="134" stroke="#333" stroke-width="1" />
+    <text x="490" y="148" text-anchor="middle" class="dim-label">pos=16</text>
+    <line x1="590" y1="130" x2="590" y2="134" stroke="#333" stroke-width="1" />
+    <text x="590" y="148" text-anchor="middle" class="dim-label">pos=20</text>
+    <line x1="690" y1="130" x2="690" y2="134" stroke="#333" stroke-width="1" />
+    <text x="690" y="148" text-anchor="middle" class="dim-label">pos=24</text>
+    
+    <!-- Y轴刻度 -->
+    <line x1="36" y1="70" x2="40" y2="70" stroke="#333" stroke-width="1" />
+    <text x="30" y="75" text-anchor="end" class="dim-label">1.0</text>
+    <line x1="36" y1="130" x2="40" y2="130" stroke="#333" stroke-width="1" />
+    <text x="30" y="135" text-anchor="end" class="dim-label">0.0</text>
+    <line x1="36" y1="190" x2="40" y2="190" stroke="#333" stroke-width="1" />
+    <text x="30" y="195" text-anchor="end" class="dim-label">-1.0</text>
+    
+    <!-- 水平参考线 -->
+    <line x1="40" y1="70" x2="740" y2="70" stroke="#ddd" stroke-width="0.5" stroke-dasharray="3,3" />
+    <line x1="40" y1="130" x2="740" y2="130" stroke="#ddd" stroke-width="0.5" stroke-dasharray="3,3" />
+    <line x1="40" y1="190" x2="740" y2="190" stroke="#ddd" stroke-width="0.5" stroke-dasharray="3,3" />
+    
+    <!-- 轴标签 -->
+    <text x="390" y="170" text-anchor="middle" class="axis-label">位置索引 (Position)</text>
+    <text x="10" y="130" text-anchor="middle" transform="rotate(-90, 10, 130)" class="axis-label">编码值</text>
+    
+    <!-- 正弦波 dim=0 -->
+    <path d="M90,130 Q115,70 140,130 Q165,190 190,130 Q215,70 240,130 Q265,190 290,130 Q315,70 340,130 Q365,190 390,130 Q415,70 440,130 Q465,190 490,130 Q515,70 540,130 Q565,190 590,130 Q615,70 640,130 Q665,190 690,130" fill="none" stroke="#1f77b4" stroke-width="2" />
+    
+    <!-- 余弦波 dim=1 -->
+    <path d="M90,70 Q115,130 140,190 Q165,130 190,70 Q215,130 240,190 Q265,130 290,70 Q315,130 340,190 Q365,130 390,70 Q415,130 440,190 Q465,130 490,70 Q515,130 540,190 Q565,130 590,70 Q615,130 640,190 Q665,130 690,70" fill="none" stroke="#ff7f0e" stroke-width="2" />
+    
+    <!-- 低频正弦波 dim=2 -->
+    <path d="M90,130 Q140,100 190,70 Q240,40 290,70 Q340,100 390,130 Q440,160 490,190 Q540,220 590,190 Q640,160 690,130" fill="none" stroke="#2ca02c" stroke-width="2" stroke-dasharray="4,2" />
+    
+    <!-- 低频余弦波 dim=3 -->
+    <path d="M90,70 Q140,100 190,130 Q240,160 290,190 Q340,220 390,190 Q440,160 490,130 Q540,100 590,70 Q640,40 690,70" fill="none" stroke="#d62728" stroke-width="2" stroke-dasharray="4,2" />
+    
+    <!-- 图例 -->
+    <rect x="590" y="35" width="140" height="80" fill="white" stroke="#ccc" stroke-width="1" />
+    <line x1="600" y1="50" x2="620" y2="50" stroke="#1f77b4" stroke-width="2" />
+    <text x="625" y="54" class="dim-label">dim=0 (sin)</text>
+    <line x1="600" y1="70" x2="620" y2="70" stroke="#ff7f0e" stroke-width="2" />
+    <text x="625" y="74" class="dim-label">dim=1 (cos)</text>
+    <line x1="600" y1="90" x2="620" y2="90" stroke="#2ca02c" stroke-width="2" stroke-dasharray="4,2" />
+    <text x="625" y="94" class="dim-label">dim=2 (sin, 低频)</text>
+    <line x1="600" y1="110" x2="620" y2="110" stroke="#d62728" stroke-width="2" stroke-dasharray="4,2" />
+    <text x="625" y="114" class="dim-label">dim=3 (cos, 低频)</text>
+    
+    <!-- 从矩阵到波形图的箭头 -->
+    <path d="M480,-70 C530,-50 550,-30 550,20" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)" />
+    <text x="530" y="-45" text-anchor="middle" class="dim-label">波形化表示</text>
+  </g>
+  
+  <!-- 位置编码计算过程说明 -->
+  <g transform="translate(70, 660)">
+    <text x="430" y="0" text-anchor="middle" class="subtitle">位置编码计算过程</text>
+    
+    <!-- 框架 -->
+    <rect x="0" y="10" width="860" height="290" fill="#f8f8f8" stroke="#ccc" stroke-width="1" rx="5" ry="5" />
+    
+    <!-- 左侧：pos=0的计算 -->
+    <g transform="translate(30, 30)">
+      <text x="0" y="0" class="calc-subtitle">位置 <tspan class="calc-pos">pos=0</tspan> 的计算</text>
+      <text x="0" y="25" class="calculation">• dim=0 (偶数):</text>
+      <text x="20" y="45" class="calculation"><tspan class="calc-formula">10000^(2·0/4) = 10000^0 = 1</tspan></text>
+      <text x="20" y="65" class="calculation"><tspan class="calc-formula">pos/10000^(2·0/4) = 0/1 = 0</tspan></text>
+      <text x="20" y="85" class="calculation"><tspan class="calc-formula">PE(0,0) = sin(0) = </tspan><tspan class="calc-value">0.00</tspan></text>
+      
+      <text x="0" y="110" class="calculation">• dim=1 (奇数):</text>
+      <text x="20" y="130" class="calculation"><tspan class="calc-formula">10000^(2·0/4) = 10000^0 = 1</tspan></text>
+      <text x="20" y="150" class="calculation"><tspan class="calc-formula">pos/10000^(2·0/4) = 0/1 = 0</tspan></text>
+      <text x="20" y="170" class="calculation"><tspan class="calc-formula">PE(0,1) = cos(0) = </tspan><tspan class="calc-value">1.00</tspan></text>
+      
+      <text x="0" y="195" class="calculation">• dim=2 (偶数):</text>
+      <text x="20" y="215" class="calculation"><tspan class="calc-formula">10000^(2·1/4) = 10000^0.5 = 100</tspan></text>
+      <text x="20" y="235" class="calculation"><tspan class="calc-formula">pos/10000^(2·1/4) = 0/100 = 0</tspan></text>
+      <text x="20" y="255" class="calculation"><tspan class="calc-formula">PE(0,2) = sin(0) = </tspan><tspan class="calc-value">0.00</tspan></text>
+    </g>
+    
+    <!-- 右侧：pos=0计算 (dim=3) 和 pos=3的计算 -->
+    <g transform="translate(430, 30)">
+      <text x="0" y="0" class="calc-subtitle">位置 <tspan class="calc-pos">pos=0</tspan> 的计算 (续)</text>
+      <text x="0" y="25" class="calculation">• dim=3 (奇数):</text>
+      <text x="20" y="45" class="calculation"><tspan class="calc-formula">10000^(2·1/4) = 10000^0.5 = 100</tspan></text>
+      <text x="20" y="65" class="calculation"><tspan class="calc-formula">pos/10000^(2·1/4) = 0/100 = 0</tspan></text>
+      <text x="20" y="85" class="calculation"><tspan class="calc-formula">PE(0,3) = cos(0) = </tspan><tspan class="calc-value">1.00</tspan></text>
+      
+      <text x="0" y="110" class="calc-subtitle">位置 <tspan class="calc-pos">pos=3</tspan> 的计算</text>
+      <text x="0" y="135" class="calculation">• dim=0 (偶数):</text>
+      <text x="20" y="155" class="calculation"><tspan class="calc-formula">10000^(2·0/4) = 10000^0 = 1</tspan></text>
+      <text x="20" y="175" class="calculation"><tspan class="calc-formula">pos/10000^(2·0/4) = 3/1 = 3</tspan></text>
+      <text x="20" y="195" class="calculation"><tspan class="calc-formula">PE(3,0) = sin(3) = </tspan><tspan class="calc-value">0.14</tspan></text>
+      
+      <text x="0" y="220" class="calculation">• dim=1 (奇数):</text>
+      <text x="20" y="240" class="calculation"><tspan class="calc-formula">10000^(2·0/4) = 10000^0 = 1</tspan></text>
+      <text x="20" y="260" class="calculation"><tspan class="calc-formula">pos/10000^(2·0/4) = 3/1 = 3</tspan></text>
+    </g>
+    
+    <!-- 第三列：pos=3计算的剩余部分 -->
+    <g transform="translate(740, 140)">
+      <text x="20" y="0" class="calculation"><tspan class="calc-formula">PE(3,1) = cos(3) = </tspan><tspan class="calc-value">-0.99</tspan></text>
+      
+      <text x="0" y="25" class="calculation">• dim=2 (偶数):</text>
+      <text x="20" y="45" class="calculation"><tspan class="calc-formula">10000^(2·1/4) = 10000^0.5 = 100</tspan></text>
+      <text x="20" y="65" class="calculation"><tspan class="calc-formula">pos/10000^(2·1/4) = 3/100 = 0.03</tspan></text>
+      <text x="20" y="85" class="calculation"><tspan class="calc-formula">PE(3,2) = sin(0.03) = </tspan><tspan class="calc-value">0.15</tspan></text>
+      
+      <text x="0" y="110" class="calculation">• dim=3 (奇数):</text>
+      <text x="20" y="130" class="calculation"><tspan class="calc-formula">10000^(2·1/4) = 10000^0.5 = 100</tspan></text>
+      <text x="20" y="150" class="calculation"><tspan class="calc-formula">pos/10000^(2·1/4) = 3/100 = 0.03</tspan></text>
+      <text x="20" y="170" class="calculation"><tspan class="calc-formula">PE(3,3) = cos(0.03) = </tspan><tspan class="calc-value">0.99</tspan></text>
+    </g>
+    
+    <!-- 说明文本 -->
+    <text x="30" y="275" class="calculation">注：计算时，d_model=4（嵌入维度），i 是维度索引（0, 1, 2, 3）。公式中 10000^(2i/d_model) 产生不同频率，使位置编码在不同维度上的变化速率不同。</text>
+  </g>
+  
+  <!-- 注释文本 -->
+  <g transform="translate(130, 960)">
+    <text x="0" y="0" class="caption">• 位置编码使Transformer能够区分序列中词元的位置信息</text>
+    <text x="420" y="0" class="caption">• 不同维度采用不同频率的正弦/余弦函数，形成位置的唯一表示</text>
+    <text x="0" y="20" class="caption">• 奇数维度使用余弦函数，偶数维度使用正弦函数</text>
+    <text x="420" y="20" class="caption">• 相对位置关系在不同序列长度之间具有一致性</text>
+  </g>
+</svg>

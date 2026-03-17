@@ -1,0 +1,44 @@
+[[main]]
+  name       = 'Categories'
+  identifier = 'categories'
+  pageRef    = '/categories'
+  weight     = 1
+
+[[main]]
+  name       = 'Tags'
+  identifier = 'tags'
+  pageRef    = '/tags'
+  weight     = 2
+
+[[main]]
+  name       = 'GitHub'
+  identifier = 'github'
+  weight     = 3
+  url        = 'https://github.com/valuejhxu'
+  pre        = 'github'
+
+[[more]]
+  name       = 'About'
+  identifier = 'about'
+  pageRef    = '/about'
+  weight     = 1
+
+[[more]]
+  name       = 'Author'
+  identifier = 'author'
+  pageRef    = '/author'
+  weight     = 2
+
+[[footer]]
+  identifier = 'github'
+  url        = 'https://github.com/valuejhxu'
+  weight     = 1
+  name       = 'GitHub'
+  pre        = 'github'
+
+[[footer]]
+  identifier = 'email'
+  url        = 'mailto:valuejhxu@gmail.com'
+  weight     = 2
+  name       = 'email'
+  pre        = 'email'

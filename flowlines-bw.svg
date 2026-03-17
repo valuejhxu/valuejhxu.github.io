@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- 黑白灰渐变定义 -->
+        <linearGradient id="flowGradient1" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" style="stop-color:#000000;stop-opacity:0.95"/>
+            <stop offset="50%" style="stop-color:#404040;stop-opacity:0.8"/>
+            <stop offset="100%" style="stop-color:#808080;stop-opacity:0.6"/>
+        </linearGradient>
+        <linearGradient id="flowGradient2" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" style="stop-color:#404040;stop-opacity:0.9"/>
+            <stop offset="50%" style="stop-color:#808080;stop-opacity:0.7"/>
+            <stop offset="100%" style="stop-color:#C0C0C0;stop-opacity:0.5"/>
+        </linearGradient>
+        <!-- 径向渐变 - 龙卷风效果 -->
+        <radialGradient id="tornadoGradient" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style="stop-color:#000000;stop-opacity:0.95"/>
+            <stop offset="70%" style="stop-color:#404040;stop-opacity:0.7"/>
+            <stop offset="100%" style="stop-color:#808080;stop-opacity:0"/>
+        </radialGradient>
+    </defs>
+
+    <!-- 龙卷风主体 -->
+    <g class="tornado-core">
+        <!-- 多条螺旋上升路径 -->
+        <path d="M 400,800 
+                 C 420,750 380,700 400,650
+                 S 450,600 500,550
+                 S 550,500 600,450
+                 S 650,400 700,350
+                 S 750,300 800,250" 
+            fill="none" stroke="url(#flowGradient1)" stroke-width="6" opacity="0.8" class="tornado-path"/>
+        
+        <path d="M 400,800 
+                 C 380,750 420,700 400,650
+                 S 350,600 300,550
+                 S 250,500 200,450
+                 S 150,400 100,350
+                 S 50,300 0,250" 
+            fill="none" stroke="url(#flowGradient1)" stroke-width="6" opacity="0.8" class="tornado-path"/>
+        
+        <path d="M 400,800 
+                 C 450,750 350,700 400,650
+                 S 500,600 600,550
+                 S 700,500 750,450
+                 S 800,400 800,350" 
+            fill="none" stroke="url(#flowGradient2)" stroke-width="5" opacity="0.7" class="tornado-path"/>
+        
+        <path d="M 400,800 
+                 C 350,750 450,700 400,650
+                 S 300,600 200,550
+                 S 100,500 50,450
+                 S 0,400 0,350" 
+            fill="none" stroke="url(#flowGradient2)" stroke-width="5" opacity="0.7" class="tornado-path"/>
+
+        <!-- 混乱螺旋线 -->
+        <path d="M 400,800 
+                 Q 500,700 300,600 
+                 T 600,500 200,400 
+                 T 700,300 100,200" 
+            fill="none" stroke="url(#flowGradient1)" stroke-width="4" opacity="0.6" class="chaos-path"/>
+        
+        <path d="M 400,800 
+                 Q 300,700 500,600 
+                 T 200,500 600,400 
+                 T 100,300 700,200" 
+            fill="none" stroke="url(#flowGradient2)" stroke-width="4" opacity="0.6" class="chaos-path"/>
+    </g>
+
+    <!-- 漩涡环效果 -->
+    <g class="vortex-rings">
+        <!-- 从下到上逐渐变大的环 -->
+        <ellipse cx="400" cy="750" rx="50" ry="20" 
+            fill="none" stroke="url(#tornadoGradient)" stroke-width="5" class="vortex-ring"/>
+        <ellipse cx="400" cy="650" rx="100" ry="30" 
+            fill="none" stroke="url(#tornadoGradient)" stroke-width="5" class="vortex-ring"/>
+        <ellipse cx="400" cy="550" rx="150" ry="40" 
+            fill="none" stroke="url(#tornadoGradient)" stroke-width="4" class="vortex-ring"/>
+        <ellipse cx="400" cy="450" rx="200" ry="50" 
+            fill="none" stroke="url(#tornadoGradient)" stroke-width="4" class="vortex-ring"/>
+        <ellipse cx="400" cy="350" rx="250" ry="60" 
+            fill="none" stroke="url(#tornadoGradient)" stroke-width="3" class="vortex-ring"/>
+        <ellipse cx="400" cy="250" rx="300" ry="70" 
+            fill="none" stroke="url(#tornadoGradient)" stroke-width="3" class="vortex-ring"/>
+        <ellipse cx="400" cy="150" rx="350" ry="80" 
+            fill="none" stroke="url(#tornadoGradient)" stroke-width="3" class="vortex-ring"/>
+    </g>
+
+    <!-- 混乱气流效果 -->
+    <g class="chaos-flow">
+        <!-- 不规则气流路径 -->
+        <path d="M 400,800 
+                 C 300,750 500,700 350,650
+                 S 450,600 250,550
+                 S 550,500 150,450
+                 S 650,400 50,350
+                 S 750,300 0,250" 
+            fill="none" stroke="url(#flowGradient1)" stroke-width="3" opacity="0.5" class="chaos-flow"/>
+        
+        <path d="M 400,800 
+                 C 500,750 300,700 450,650
+                 S 350,600 550,550
+                 S 250,500 650,450
+                 S 150,400 750,350
+                 S 50,300 800,250" 
+            fill="none" stroke="url(#flowGradient2)" stroke-width="3" opacity="0.5" class="chaos-flow"/>
+    </g>
+
+    <!-- 碎片效果 -->
+    <g class="debris">
+        <!-- 更多的漂浮碎片 -->
+        <g class="debris-group-1">
+            <circle cx="380" cy="750" r="3" fill="#000000" class="debris-particle" style="animation-delay: 0s"/>
+            <circle cx="420" cy="700" r="3" fill="#404040" class="debris-particle" style="animation-delay: -0.5s"/>
+            <circle cx="350" cy="650" r="3" fill="#808080" class="debris-particle" style="animation-delay: -1s"/>
+            <circle cx="450" cy="600" r="3" fill="#000000" class="debris-particle" style="animation-delay: -1.5s"/>
+            <circle cx="370" cy="550" r="3" fill="#404040" class="debris-particle" style="animation-delay: -2s"/>
+        </g>
+        <g class="debris-group-2">
+            <circle cx="430" cy="500" r="2" fill="#808080" class="debris-particle-fast" style="animation-delay: 0s"/>
+            <circle cx="360" cy="450" r="2" fill="#000000" class="debris-particle-fast" style="animation-delay: -0.3s"/>
+            <circle cx="440" cy="400" r="2" fill="#404040" class="debris-particle-fast" style="animation-delay: -0.6s"/>
+            <circle cx="350" cy="350" r="2" fill="#808080" class="debris-particle-fast" style="animation-delay: -0.9s"/>
+            <circle cx="450" cy="300" r="2" fill="#000000" class="debris-particle-fast" style="animation-delay: -1.2s"/>
+        </g>
+    </g>
+
+    <style>
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(720deg); }
+        }
+        @keyframes chaotic-spin {
+            0% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(270deg) scale(1.2); }
+            50% { transform: rotate(540deg) scale(0.8); }
+            75% { transform: rotate(810deg) scale(1.1); }
+            100% { transform: rotate(1080deg) scale(1); }
+        }
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(30px, -30px) rotate(90deg); }
+            50% { transform: translate(-30px, -60px) rotate(180deg); }
+            75% { transform: translate(30px, -90px) rotate(270deg); }
+            100% { transform: translate(0, -120px) rotate(360deg); }
+        }
+        @keyframes float-fast {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(50px, -50px) rotate(180deg); }
+            50% { transform: translate(-50px, -100px) rotate(360deg); }
+            75% { transform: translate(50px, -150px) rotate(540deg); }
+            100% { transform: translate(0, -200px) rotate(720deg); }
+        }
+        @keyframes flow {
+            0% { stroke-dashoffset: 2000; }
+            100% { stroke-dashoffset: -2000; }
+        }
+        .tornado-path {
+            stroke-dasharray: 2000;
+            animation: flow 8s linear infinite;
+        }
+        .chaos-path {
+            stroke-dasharray: 2000;
+            animation: flow 6s linear infinite;
+        }
+        .vortex-ring {
+            transform-origin: center;
+            animation: chaotic-spin 10s linear infinite;
+        }
+        .chaos-flow {
+            stroke-dasharray: 1500;
+            animation: flow 7s linear infinite;
+        }
+        .debris-particle {
+            animation: float 4s ease-in-out infinite;
+        }
+        .debris-particle-fast {
+            animation: float-fast 3s ease-in-out infinite;
+        }
+        /* 交错动画 */
+        .tornado-path:nth-child(2n) {
+            animation-duration: 7s;
+            animation-direction: reverse;
+        }
+        .tornado-path:nth-child(3n) {
+            animation-duration: 9s;
+        }
+        .chaos-path:nth-child(odd) {
+            animation-duration: 5s;
+            animation-direction: reverse;
+        }
+        .vortex-ring:nth-child(odd) {
+            animation-direction: reverse;
+        }
+        .vortex-ring:nth-child(even) {
+            animation-duration: 8s;
+        }
+        .chaos-flow:nth-child(odd) {
+            animation-duration: 6s;
+            animation-direction: reverse;
+        }
+        .debris-particle:nth-child(2n) {
+            animation-duration: 5s;
+        }
+        .debris-particle:nth-child(3n) {
+            animation-duration: 6s;
+        }
+        .debris-particle-fast:nth-child(2n) {
+            animation-duration: 2.5s;
+        }
+        .debris-particle-fast:nth-child(3n) {
+            animation-duration: 3.5s;
+        }
+    </style>
+</svg> 

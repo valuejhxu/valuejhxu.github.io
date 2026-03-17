@@ -1,0 +1,142 @@
+<svg width="600" height="450" xmlns="http://www.w3.org/2000/svg">
+  <!-- 定义渐变和滤镜 -->
+  <defs>
+    <!-- 箭头定义 - 修复变形问题 -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,10 L10,5 z" fill="#495057"/>
+    </marker>
+    
+    <!-- 渐变定义 -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="lensGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a2d2ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bde0fe;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="sensorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#343a40;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#212529;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="magnifierGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:white;stop-opacity:1" />
+      <stop offset="90%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dee2e6;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- 滤镜定义 -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+    
+    <filter id="lightGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <!-- 用于像素网格的模式 -->
+    <pattern id="pixelGrid" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="7" height="7" fill="#2b2d42" stroke="#4a4e69" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="600" height="450" fill="url(#bgGradient)" rx="8"/>
+  
+  <!-- 顶部标题栏 -->
+  <rect x="0" y="0" width="600" height="70" fill="#4361ee" rx="8"/>
+  <rect x="0" y="65" width="600" height="5" fill="#3a0ca3"/>
+  
+  <!-- 标题 -->
+  <text x="300" y="30" font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="white">感光元件工作原理</text>
+  <text x="300" y="50" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#f1faee">将光线转换为电信号以形成数字图像</text>
+  
+  <!-- 相机外壳 - 更现代化的设计 -->
+  <rect x="80" y="110" width="440" height="200" rx="15" fill="#dee2e6" stroke="#6c757d" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="90" y="120" width="420" height="180" rx="10" fill="#adb5bd" stroke="#6c757d" stroke-width="1"/>
+  
+  <!-- 镜头 - 改进的视觉效果 -->
+  <ellipse cx="120" cy="200" rx="22" ry="60" fill="#6c757d" stroke="#495057" stroke-width="2"/>
+  <ellipse cx="120" cy="200" rx="15" ry="50" fill="url(#lensGradient)" stroke="#495057" stroke-width="1"/>
+  <ellipse cx="115" cy="200" rx="8" ry="30" fill="#bde0fe" fill-opacity="0.6"/>
+  
+  <!-- 入射光线 - 更引人注目 -->
+  <line x1="30" y1="180" x2="105" y2="190" stroke="#ffb703" stroke-width="2.5" stroke-dasharray="4,2" filter="url(#lightGlow)"/>
+  <line x1="30" y1="200" x2="105" y2="200" stroke="#fd9e02" stroke-width="2.5" stroke-dasharray="4,2" filter="url(#lightGlow)"/>
+  <line x1="30" y1="220" x2="105" y2="210" stroke="#fb8500" stroke-width="2.5" stroke-dasharray="4,2" filter="url(#lightGlow)"/>
+  <text x="45" y="170" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#495057">入射光线</text>
+  
+  <!-- 感光元件 - 更精细的细节 -->
+  <rect x="200" y="150" width="90" height="120" rx="5" fill="url(#sensorGradient)" stroke="#000" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="205" y="155" width="80" height="110" rx="3" fill="#212529" stroke="#000" stroke-width="1"/>
+  <text x="245" y="140" font-family="Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#333">感光元件</text>
+  
+  <!-- 像素网格 - 改进的可视性 -->
+  <g transform="translate(210, 160)">
+    <rect width="70" height="100" fill="url(#pixelGrid)" stroke="#6c757d" stroke-width="0.5"/>
+  </g>
+  
+  <!-- 放大镜效果 - 更逼真 -->
+  <circle cx="340" cy="200" r="50" fill="url(#magnifierGradient)" stroke="#ced4da" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="340" cy="200" r="48" fill="none" stroke="#adb5bd" stroke-width="1"/>
+  <line x1="265" y1="200" x2="295" y2="200" stroke="#adb5bd" stroke-width="1.5" stroke-dasharray="3,2"/>
+  
+  <!-- 单像素放大视图 - 更清晰的层次 -->
+  <g transform="translate(305, 170)">
+    <!-- 像素层次结构底板 -->
+    <rect width="70" height="60" rx="4" fill="#f8f9fa" stroke="#ced4da" stroke-width="1.5" filter="url(#shadow)"/>
+    
+    <!-- 微透镜 -->
+    <rect x="5" y="5" width="60" height="8" rx="4" fill="#a2d2ff" stroke="#8ecae6" stroke-width="1"/>
+    <text x="72" y="11" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#495057">微透镜</text>
+    
+    <!-- 彩色滤光片 -->
+    <g transform="translate(5, 18)">
+      <rect width="20" height="10" fill="#ef476f" stroke="#adb5bd" stroke-width="0.5"/>
+      <rect x="20" width="20" height="10" fill="#06d6a0" stroke="#adb5bd" stroke-width="0.5"/>
+      <rect x="40" width="20" height="10" fill="#118ab2" stroke="#adb5bd" stroke-width="0.5"/>
+    </g>
+    <text x="72" y="25" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#495057">彩色滤光片</text>
+    
+    <!-- 感光区 -->
+    <rect x="5" y="33" width="60" height="12" fill="#343a40" stroke="#6c757d" stroke-width="1"/>
+    <text x="72" y="40" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#495057">光电二极管</text>
+    
+    <!-- 电路层 -->
+    <rect x="5" y="50" width="60" height="7" fill="#774936" stroke="#6c757d" stroke-width="1"/>
+    <text x="72" y="54" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#495057">电路层</text>
+  </g>
+  
+  <!-- 信号处理流程 - 修复箭头 -->
+  <path d="M290,270 C290,280 290,290 310,290 L350,290 C370,290 370,280 370,270" stroke="#495057" stroke-width="2" fill="none"/>
+  <path d="M370,270 L370,270.1" stroke="#495057" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+  
+  <rect x="320" y="290" width="100" height="35" rx="6" fill="#4895ef" stroke="#4361ee" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="370" y="312" font-family="Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="white">信号处理器</text>
+  
+  <path d="M420,307 C440,307 450,307 460,307 C470,307 470,290 470,270" stroke="#495057" stroke-width="2" fill="none"/>
+  <path d="M470,270 L470,270.1" stroke="#495057" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+  
+  <!-- 数字图像 - 更生动的展示 -->
+  <rect x="430" y="150" width="70" height="110" rx="6" fill="white" stroke="#ced4da" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="435" y="155" width="60" height="100" rx="3" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <circle cx="450" cy="175" r="10" fill="#ffb4a2"/>
+  <rect x="440" y="190" width="50" height="40" rx="2" fill="#a8dadc"/>
+  <rect x="440" y="235" width="15" height="15" rx="1" fill="#8ecae6"/>
+  <rect x="465" y="235" width="20" height="15" rx="1" fill="#ffafcc"/>
+  <text x="465" y="140" font-family="Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#333">数字图像</text>
+  
+  <!-- 底部流程文字说明 - 更清晰的展示 -->
+  <rect x="25" y="335" width="200" height="85" rx="6" fill="white" fill-opacity="0.8" stroke="#dee2e6" stroke-width="1" filter="url(#shadow)"/>
+  <text x="35" y="355" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#495057">1. 光线通过镜头</text>
+  <text x="35" y="375" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#495057">2. 聚焦到感光元件上</text>
+  <text x="35" y="395" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#495057">3. 像素将光转换为电信号</text>
+  <text x="35" y="415" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#495057">4. 信号处理形成最终图像</text>
+  
+  <!-- 作者信息 -->
+  <text x="590" y="435" font-family="Arial, sans-serif" font-size="9" text-anchor="end" fill="#6c757d">valuejhxu</text>
+</svg> 

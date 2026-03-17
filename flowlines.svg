@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- 定义更丰富的渐变 -->
+        <linearGradient id="flowGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#3498db;stop-opacity:0.4"/>
+            <stop offset="33%" style="stop-color:#9b59b6;stop-opacity:0.3"/>
+            <stop offset="66%" style="stop-color:#2ecc71;stop-opacity:0.2"/>
+            <stop offset="100%" style="stop-color:#3498db;stop-opacity:0.4"/>
+        </linearGradient>
+        <linearGradient id="flowGradient2" x1="100%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:0.3"/>
+            <stop offset="33%" style="stop-color:#f1c40f;stop-opacity:0.2"/>
+            <stop offset="66%" style="stop-color:#1abc9c;stop-opacity:0.1"/>
+            <stop offset="100%" style="stop-color:#e74c3c;stop-opacity:0.3"/>
+        </linearGradient>
+        <!-- 添加径向渐变 -->
+        <radialGradient id="pulseGradient" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style="stop-color:#3498db;stop-opacity:0.4"/>
+            <stop offset="100%" style="stop-color:#2ecc71;stop-opacity:0"/>
+        </radialGradient>
+    </defs>
+
+    <!-- 复杂螺旋路径组 -->
+    <g class="spiral-group">
+        <path d="M 700,400 Q 600,300 500,400 T 300,300 100,400 T 300,500 500,400 T 700,500 700,400" fill="none" stroke="url(#flowGradient1)" stroke-width="4" opacity="0.6" class="spiral-path"/>
+        <path d="M 100,400 Q 200,300 300,400 T 500,300 700,400 T 500,500 300,400 T 100,500 100,400" fill="none" stroke="url(#flowGradient1)" stroke-width="4" opacity="0.6" class="spiral-path"/>
+        <path d="M 400,700 Q 300,600 400,500 T 300,300 400,100 T 500,300 400,500 T 500,600 400,700" fill="none" stroke="url(#flowGradient2)" stroke-width="4" opacity="0.6" class="spiral-path"/>
+        <path d="M 400,100 Q 300,200 400,300 T 300,500 400,700 T 500,500 400,300 T 500,200 400,100" fill="none" stroke="url(#flowGradient2)" stroke-width="4" opacity="0.6" class="spiral-path"/>
+        <path d="M 700,700 Q 600,600 500,500 T 300,300 100,100 T 200,300 400,400 T 600,600 700,700" fill="none" stroke="url(#flowGradient1)" stroke-width="4" opacity="0.6" class="spiral-path"/>
+        <path d="M 100,100 Q 200,200 300,300 T 500,500 700,700 T 600,500 400,400 T 200,200 100,100" fill="none" stroke="url(#flowGradient1)" stroke-width="4" opacity="0.6" class="spiral-path"/>
+        <path d="M 700,100 Q 600,200 500,300 T 300,500 100,700 T 200,500 400,400 T 600,200 700,100" fill="none" stroke="url(#flowGradient2)" stroke-width="4" opacity="0.6" class="spiral-path"/>
+        <path d="M 100,700 Q 200,600 300,500 T 500,300 700,100 T 600,300 400,400 T 200,600 100,700" fill="none" stroke="url(#flowGradient2)" stroke-width="4" opacity="0.6" class="spiral-path"/>
+    </g>
+
+    <!-- 波浪干扰线 -->
+    <g class="interference-waves">
+        <path d="M 0,100 Q 200,150 400,100 T 600,150 800,100" fill="none" stroke="url(#flowGradient1)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,120 Q 200,70 400,120 T 600,70 800,120" fill="none" stroke="url(#flowGradient2)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,140 Q 200,190 400,140 T 600,190 800,140" fill="none" stroke="url(#flowGradient1)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,160 Q 200,110 400,160 T 600,110 800,160" fill="none" stroke="url(#flowGradient2)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,180 Q 200,230 400,180 T 600,230 800,180" fill="none" stroke="url(#flowGradient1)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,200 Q 200,150 400,200 T 600,150 800,200" fill="none" stroke="url(#flowGradient2)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,220 Q 200,270 400,220 T 600,270 800,220" fill="none" stroke="url(#flowGradient1)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,240 Q 200,190 400,240 T 600,190 800,240" fill="none" stroke="url(#flowGradient2)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,260 Q 200,310 400,260 T 600,310 800,260" fill="none" stroke="url(#flowGradient1)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,280 Q 200,230 400,280 T 600,230 800,280" fill="none" stroke="url(#flowGradient2)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,300 Q 200,350 400,300 T 600,350 800,300" fill="none" stroke="url(#flowGradient1)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,320 Q 200,270 400,320 T 600,270 800,320" fill="none" stroke="url(#flowGradient2)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,340 Q 200,390 400,340 T 600,390 800,340" fill="none" stroke="url(#flowGradient1)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,360 Q 200,310 400,360 T 600,310 800,360" fill="none" stroke="url(#flowGradient2)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,380 Q 200,430 400,380 T 600,430 800,380" fill="none" stroke="url(#flowGradient1)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,400 Q 200,350 400,400 T 600,350 800,400" fill="none" stroke="url(#flowGradient2)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,420 Q 200,470 400,420 T 600,470 800,420" fill="none" stroke="url(#flowGradient1)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,440 Q 200,390 400,440 T 600,390 800,440" fill="none" stroke="url(#flowGradient2)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,460 Q 200,510 400,460 T 600,510 800,460" fill="none" stroke="url(#flowGradient1)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,480 Q 200,430 400,480 T 600,430 800,480" fill="none" stroke="url(#flowGradient2)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,500 Q 200,550 400,500 T 600,550 800,500" fill="none" stroke="url(#flowGradient1)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,520 Q 200,470 400,520 T 600,470 800,520" fill="none" stroke="url(#flowGradient2)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,540 Q 200,590 400,540 T 600,590 800,540" fill="none" stroke="url(#flowGradient1)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,560 Q 200,510 400,560 T 600,510 800,560" fill="none" stroke="url(#flowGradient2)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,580 Q 200,630 400,580 T 600,630 800,580" fill="none" stroke="url(#flowGradient1)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,600 Q 200,550 400,600 T 600,550 800,600" fill="none" stroke="url(#flowGradient2)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,620 Q 200,670 400,620 T 600,670 800,620" fill="none" stroke="url(#flowGradient1)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,640 Q 200,590 400,640 T 600,590 800,640" fill="none" stroke="url(#flowGradient2)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,660 Q 200,710 400,660 T 600,710 800,660" fill="none" stroke="url(#flowGradient1)" stroke-width="3" opacity="0.3" class="wave-path"/>
+        <path d="M 0,680 Q 200,630 400,680 T 600,630 800,680" fill="none" stroke="url(#flowGradient2)" stroke-width="3" opacity="0.3" class="wave-path"/>
+    </g>
+
+    <!-- 动态螺旋 -->
+    <g class="dynamic-spirals">
+        <path d="M 400,400 Q 600,400 600,200 T 400,0 200,200 T 400,400" fill="none" stroke="url(#flowGradient1)" stroke-width="4" opacity="0.4" class="spiral-dynamic"/>
+        <path d="M 400,400 Q 400,600 200,600 T 0,400 200,200 T 400,400" fill="none" stroke="url(#flowGradient2)" stroke-width="4" opacity="0.4" class="spiral-dynamic"/>
+        <path d="M 400,400 Q 200,400 200,600 T 400,800 600,600 T 400,400" fill="none" stroke="url(#flowGradient1)" stroke-width="4" opacity="0.4" class="spiral-dynamic"/>
+        <path d="M 400,400 Q 400,200 600,200 T 800,400 600,600 T 400,400" fill="none" stroke="url(#flowGradient2)" stroke-width="4" opacity="0.4" class="spiral-dynamic"/>
+        <path d="M 400,400 Q 550,550 500,700 T 300,750 150,600 T 400,400" fill="none" stroke="url(#flowGradient1)" stroke-width="4" opacity="0.4" class="spiral-dynamic"/>
+        <path d="M 400,400 Q 250,550 100,500 T 50,300 200,150 T 400,400" fill="none" stroke="url(#flowGradient2)" stroke-width="4" opacity="0.4" class="spiral-dynamic"/>
+        <path d="M 400,400 Q 250,250 300,100 T 500,50 650,200 T 400,400" fill="none" stroke="url(#flowGradient1)" stroke-width="4" opacity="0.4" class="spiral-dynamic"/>
+        <path d="M 400,400 Q 550,250 700,300 T 750,500 600,650 T 400,400" fill="none" stroke="url(#flowGradient2)" stroke-width="4" opacity="0.4" class="spiral-dynamic"/>
+        <path d="M 400,400 Q 500,350 650,400 T 700,550 550,650 T 400,400" fill="none" stroke="url(#flowGradient1)" stroke-width="4" opacity="0.4" class="spiral-dynamic"/>
+        <path d="M 400,400 Q 450,500 400,650 T 250,700 150,550 T 400,400" fill="none" stroke="url(#flowGradient2)" stroke-width="4" opacity="0.4" class="spiral-dynamic"/>
+        <path d="M 400,400 Q 300,450 150,400 T 100,250 250,150 T 400,400" fill="none" stroke="url(#flowGradient1)" stroke-width="4" opacity="0.4" class="spiral-dynamic"/>
+        <path d="M 400,400 Q 350,300 400,150 T 550,100 650,250 T 400,400" fill="none" stroke="url(#flowGradient2)" stroke-width="4" opacity="0.4" class="spiral-dynamic"/>
+    </g>
+
+    <!-- 脉冲圆环 -->
+    <g class="pulse-rings">
+        <circle cx="400" cy="400" r="40" fill="none" stroke="url(#pulseGradient)" stroke-width="4" class="pulse-ring" style="animation-delay: 0s"/>
+        <circle cx="400" cy="400" r="80" fill="none" stroke="url(#pulseGradient)" stroke-width="4" class="pulse-ring" style="animation-delay: -0.5s"/>
+        <circle cx="400" cy="400" r="120" fill="none" stroke="url(#pulseGradient)" stroke-width="4" class="pulse-ring" style="animation-delay: -1s"/>
+        <circle cx="400" cy="400" r="160" fill="none" stroke="url(#pulseGradient)" stroke-width="4" class="pulse-ring" style="animation-delay: -1.5s"/>
+        <circle cx="400" cy="400" r="200" fill="none" stroke="url(#pulseGradient)" stroke-width="4" class="pulse-ring" style="animation-delay: -2s"/>
+    </g>
+
+    <!-- 交错网格 -->
+    <g class="crosshatch-grid" opacity="0.2">
+        <path d="M 0,100 L 800,500" stroke="#9b59b6" stroke-width="2" fill="none" class="crosshatch-line"/>
+        <path d="M 0,200 L 800,600" stroke="#3498db" stroke-width="2" fill="none" class="crosshatch-line"/>
+        <path d="M 0,300 L 800,700" stroke="#2ecc71" stroke-width="2" fill="none" class="crosshatch-line"/>
+        <path d="M 0,400 L 800,800" stroke="#e74c3c" stroke-width="2" fill="none" class="crosshatch-line"/>
+        <path d="M 0,500 L 800,100" stroke="#f1c40f" stroke-width="2" fill="none" class="crosshatch-line"/>
+        <path d="M 0,600 L 800,200" stroke="#1abc9c" stroke-width="2" fill="none" class="crosshatch-line"/>
+        <path d="M 0,700 L 800,300" stroke="#9b59b6" stroke-width="2" fill="none" class="crosshatch-line"/>
+        <path d="M 0,800 L 800,400" stroke="#3498db" stroke-width="2" fill="none" class="crosshatch-line"/>
+        <path d="M 100,0 L 500,800" stroke="#2ecc71" stroke-width="2" fill="none" class="crosshatch-line"/>
+        <path d="M 200,0 L 600,800" stroke="#e74c3c" stroke-width="2" fill="none" class="crosshatch-line"/>
+        <path d="M 300,0 L 700,800" stroke="#f1c40f" stroke-width="2" fill="none" class="crosshatch-line"/>
+        <path d="M 400,0 L 800,800" stroke="#1abc9c" stroke-width="2" fill="none" class="crosshatch-line"/>
+        <path d="M 500,0 L 100,800" stroke="#9b59b6" stroke-width="2" fill="none" class="crosshatch-line"/>
+        <path d="M 600,0 L 200,800" stroke="#3498db" stroke-width="2" fill="none" class="crosshatch-line"/>
+        <path d="M 700,0 L 300,800" stroke="#2ecc71" stroke-width="2" fill="none" class="crosshatch-line"/>
+        <path d="M 800,0 L 400,800" stroke="#e74c3c" stroke-width="2" fill="none" class="crosshatch-line"/>
+    </g>
+
+    <!-- 装饰性点缀 -->
+    <g class="dots">
+        <circle cx="400" cy="400" r="3" fill="#3498db" opacity="0.2" class="floating-dot" style="animation-delay: 0s"/>
+        <circle cx="450" cy="350" r="2" fill="#2ecc71" opacity="0.2" class="floating-dot" style="animation-delay: -0.1s"/>
+        <circle cx="500" cy="300" r="2.5" fill="#3498db" opacity="0.2" class="floating-dot" style="animation-delay: -0.2s"/>
+        <circle cx="550" cy="250" r="2" fill="#2ecc71" opacity="0.2" class="floating-dot" style="animation-delay: -0.3s"/>
+        <circle cx="600" cy="200" r="3" fill="#3498db" opacity="0.2" class="floating-dot" style="animation-delay: -0.4s"/>
+        <circle cx="650" cy="250" r="2" fill="#2ecc71" opacity="0.2" class="floating-dot" style="animation-delay: -0.5s"/>
+        <circle cx="700" cy="300" r="2.5" fill="#3498db" opacity="0.2" class="floating-dot" style="animation-delay: -0.6s"/>
+        <circle cx="650" cy="350" r="2" fill="#2ecc71" opacity="0.2" class="floating-dot" style="animation-delay: -0.7s"/>
+        <circle cx="600" cy="400" r="3" fill="#3498db" opacity="0.2" class="floating-dot" style="animation-delay: -0.8s"/>
+        <circle cx="550" cy="450" r="2" fill="#2ecc71" opacity="0.2" class="floating-dot" style="animation-delay: -0.9s"/>
+        <circle cx="500" cy="500" r="2.5" fill="#3498db" opacity="0.2" class="floating-dot" style="animation-delay: -1.0s"/>
+        <circle cx="450" cy="550" r="2" fill="#2ecc71" opacity="0.2" class="floating-dot" style="animation-delay: -1.1s"/>
+        <circle cx="400" cy="600" r="3" fill="#3498db" opacity="0.2" class="floating-dot" style="animation-delay: -1.2s"/>
+        <circle cx="350" cy="550" r="2" fill="#2ecc71" opacity="0.2" class="floating-dot" style="animation-delay: -1.3s"/>
+        <circle cx="300" cy="500" r="2.5" fill="#3498db" opacity="0.2" class="floating-dot" style="animation-delay: -1.4s"/>
+        <circle cx="250" cy="450" r="2" fill="#2ecc71" opacity="0.2" class="floating-dot" style="animation-delay: -1.5s"/>
+        <circle cx="200" cy="400" r="3" fill="#3498db" opacity="0.2" class="floating-dot" style="animation-delay: -1.6s"/>
+        <circle cx="250" cy="350" r="2" fill="#2ecc71" opacity="0.2" class="floating-dot" style="animation-delay: -1.7s"/>
+        <circle cx="300" cy="300" r="2.5" fill="#3498db" opacity="0.2" class="floating-dot" style="animation-delay: -1.8s"/>
+        <circle cx="350" cy="250" r="2" fill="#2ecc71" opacity="0.2" class="floating-dot" style="animation-delay: -1.9s"/>
+        <circle cx="300" cy="200" r="3" fill="#3498db" opacity="0.2" class="floating-dot" style="animation-delay: -2.0s"/>
+        <circle cx="350" cy="150" r="2" fill="#2ecc71" opacity="0.2" class="floating-dot" style="animation-delay: -2.1s"/>
+        <circle cx="400" cy="100" r="2.5" fill="#3498db" opacity="0.2" class="floating-dot" style="animation-delay: -2.2s"/>
+        <circle cx="450" cy="150" r="2" fill="#2ecc71" opacity="0.2" class="floating-dot" style="animation-delay: -2.3s"/>
+        <circle cx="500" cy="200" r="3" fill="#3498db" opacity="0.2" class="floating-dot" style="animation-delay: -2.4s"/>
+        <circle cx="200" cy="300" r="2" fill="#2ecc71" opacity="0.2" class="floating-dot" style="animation-delay: -2.5s"/>
+        <circle cx="150" cy="350" r="2.5" fill="#3498db" opacity="0.2" class="floating-dot" style="animation-delay: -2.6s"/>
+        <circle cx="100" cy="400" r="2" fill="#2ecc71" opacity="0.2" class="floating-dot" style="animation-delay: -2.7s"/>
+        <circle cx="150" cy="450" r="3" fill="#3498db" opacity="0.2" class="floating-dot" style="animation-delay: -2.8s"/>
+        <circle cx="200" cy="500" r="2" fill="#2ecc71" opacity="0.2" class="floating-dot" style="animation-delay: -2.9s"/>
+    </g>
+
+    <!-- 动画效果 -->
+    <style>
+        @keyframes flow {
+            0% { stroke-dashoffset: 2000; }
+            100% { stroke-dashoffset: 0; }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.2; }
+            50% { transform: scale(1.2); opacity: 0.4; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(3px, 3px); }
+            50% { transform: translate(-3px, 3px); }
+            75% { transform: translate(-3px, -3px); }
+        }
+        @keyframes ripple {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            100% { transform: scale(1.2); opacity: 0; }
+        }
+        @keyframes sway {
+            0%, 100% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+        }
+        .spiral-path {
+            stroke-dasharray: 2000;
+            animation: flow 20s linear infinite;
+        }
+        .wave-path {
+            stroke-dasharray: 1000;
+            animation: flow 15s linear infinite;
+        }
+        .spiral-dynamic {
+            stroke-dasharray: 1500;
+            animation: flow 25s linear infinite alternate;
+        }
+        .floating-dot {
+            animation: float 4s ease-in-out infinite;
+        }
+        .pulse-ring {
+            animation: ripple 3s ease-out infinite;
+        }
+        .crosshatch-line {
+            stroke-dasharray: 1200;
+            stroke-dashoffset: 1200;
+            animation: flow 30s linear infinite;
+        }
+        /* 添加交错动画 */
+        .spiral-path:nth-child(odd) {
+            animation-direction: reverse;
+            animation-duration: 25s;
+        }
+        .wave-path:nth-child(3n) {
+            animation-duration: 18s;
+            animation-delay: -2s;
+        }
+        .wave-path:nth-child(3n+1) {
+            animation-duration: 20s;
+            animation-delay: -4s;
+        }
+        .wave-path:nth-child(3n+2) {
+            animation-duration: 22s;
+            animation-delay: -6s;
+        }
+        .floating-dot:nth-child(2n) {
+            animation-duration: 5s;
+        }
+        .floating-dot:nth-child(3n) {
+            animation-duration: 6s;
+        }
+        .crosshatch-line:nth-child(odd) {
+            animation-direction: reverse;
+        }
+        .crosshatch-line:nth-child(3n) {
+            animation-duration: 35s;
+        }
+        .crosshatch-line:nth-child(3n+1) {
+            animation-duration: 40s;
+        }
+    </style>
+</svg>
