@@ -1,0 +1,23 @@
+{{- /*
+    photos — 影像页按月份分组的一个区块（记忆残片式错落排布）
+
+    用法：
+        {{< photos month="2024 · 3月" >}}
+        {{< photo src="/photos/2024/a-thumb.jpg" full="/photos/2024/a.jpg" label="成都 · 玉林" >}}
+        {{< photo src="/photos/2024/b-thumb.jpg" full="/photos/2024/b.jpg" label="夜" >}}
+        {{< /photos >}}
+
+    为什么不用主题的 pin：pin 是 CSS 多列瀑布流，排布规整、且每列等宽，
+    做不出「交错、错落」的效果。这里用 flex + 逐张微调的 margin/rotate
+    （见 assets/css/custom.css 的 .frag 规则），让照片带轻微的高低差和倾斜。
+
+    参数：
+      month  必填，区块标题，例如 "2024 · 3月"
+*/ -}}
+{{- $month := .Get "month" -}}
+<section class="frags">
+    {{- with $month }}<h2 class="frags__month">{{ . }}</h2>{{ end }}
+    <div class="frags__wall">
+        {{- .Inner -}}
+    </div>
+</section>

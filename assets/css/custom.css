@@ -11,6 +11,71 @@
 :root {
     /* mark & selector highlight color */
     --hl: yellow;
+
+    /* 加宽内容区。主题默认 58rem，正文列偏窄；custom.css 在 css.html 里最后拼接，
+       所以这里可以直接覆盖。--void 依赖 --max-width，需按同一公式重算。 */
+    --max-width: 76rem;
+}
+
+/*
+    首页时间线 —— layouts/partials/timeline.html，位于右侧「发现话题」下方。
+*/
+#timeline {
+    margin-top: var(--bigskip);
+    font-size: var(--small);
+}
+
+#timeline > .section-title {
+    margin-bottom: 1ex;
+}
+
+.timeline__year {
+    margin-bottom: 1.2em;
+}
+
+.timeline__year-label {
+    display: block;
+    border-bottom: var(--border);
+    padding-bottom: .3ex;
+    font-variant-numeric: tabular-nums;
+}
+
+.timeline__month {
+    display: flex;
+    gap: 1ex;
+    margin-top: .8em;
+}
+
+.timeline__month-label {
+    flex: 0 0 2.5em;
+    padding-top: .15em;
+    color: var(--mid);
+    font-size: var(--footnotesize, .85em);
+    text-align: right;
+}
+
+.timeline__list {
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline__list > li {
+    display: flex;
+    align-items: baseline;
+    gap: 1ex;
+    margin: 0 0 .5ex;
+}
+
+.timeline__list > li > a {
+    flex: 1 1 auto;
+}
+
+.timeline__list > li > time {
+    flex: 0 0 auto;
+    color: var(--mid);
+    font-variant-numeric: tabular-nums;
 }
 
 /*
@@ -50,4 +115,96 @@
     display: inline-block;
     margin-top: .5ex;
     text-decoration: none;
+}
+
+/*
+    影像页（/gallery/）—— 按月份分组的「记忆残片」式排布。
+    对应 layouts/shortcodes/photos.html 与 photo.html。
+
+    刻意不用规整网格：flex + wrap 让每行照片数量随宽度变化，
+    配合 span 档位（不同宽度）、nth-child 微调的垂直偏移和轻微旋转，
+    形成交错、随手散落的感觉。
+*/
+.frags {
+    margin: 0 0 var(--bigskip);
+}
+
+.frags__month {
+    margin: 0 0 1rem;
+    border-bottom: var(--border);
+    padding-bottom: .3ex;
+    font-size: var(--large);
+    font-variant-numeric: tabular-nums;
+}
+
+.frags__wall {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1.618rem 1.2rem;
+}
+
+.frag {
+    flex: 0 1 auto;
+    margin: 0;
+    transition: transform .25s ease, filter .25s ease;
+}
+
+/* 宽度档位，制造大小差异 */
+.frag--s { width: clamp(8rem, 22%, 13rem); }
+.frag--m { width: clamp(11rem, 32%, 19rem); }
+.frag--l { width: clamp(14rem, 46%, 27rem); }
+
+.frag img {
+    display: block;
+    border-radius: 2px;
+    width: 100%;
+    height: auto;
+    box-shadow: var(--box-shadow);
+}
+
+.frag figcaption {
+    margin-top: .6ex;
+    color: var(--mid);
+    font-size: var(--small);
+    line-height: 1.3;
+}
+
+/* 垂直错落：每隔几张下沉一点，打破基线对齐 */
+.frag:nth-child(3n + 2) { margin-top: 2.2rem; }
+.frag:nth-child(4n + 3) { margin-top: 1.1rem; }
+.frag:nth-child(5n + 5) { margin-top: 3rem; }
+
+/* 轻微倾斜，像随手摊开的照片 */
+.frag--tilt-l { transform: rotate(-1.2deg); }
+.frag--tilt-r { transform: rotate(1.4deg); }
+
+/* 悬停时摆正并微微放大，方便看清 */
+.frag:hover,
+.frag:focus-within {
+    transform: rotate(0) scale(1.02);
+    z-index: 1;
+}
+
+@media (max-width: 640px) {
+    .frags__wall {
+        gap: 1.2rem .8rem;
+    }
+    /* 窄屏下取消偏移与倾斜，避免拥挤和横向溢出 */
+    .frag,
+    .frag--tilt-l,
+    .frag--tilt-r {
+        margin-top: 0;
+        transform: none;
+    }
+    .frag--s { width: clamp(7rem, 40%, 10rem); }
+    .frag--m { width: clamp(9rem, 47%, 13rem); }
+    .frag--l { width: 100%; }
+}
+
+/* 尊重「减少动态效果」偏好 */
+@media (prefers-reduced-motion: reduce) {
+    .frag {
+        transition: none;
+    }
 }

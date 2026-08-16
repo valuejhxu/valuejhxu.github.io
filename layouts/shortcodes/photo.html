@@ -1,0 +1,23 @@
+{{- /*
+    photo — 影像页里的一张照片，须放在 photos 短代码内部。
+
+    参数：
+      src    必填，缩略图路径（长边约 700px）
+      full   可选，原图路径；给了就可以点击看大图
+      label  可选，说明文字
+      alt    可选，替代文本；未给则回退到 label
+      span   可选，宽度档位 s / m / l（默认 m），用来制造错落感
+      tilt   可选，倾斜方向 l / r（默认不倾斜）
+*/ -}}
+{{- $src := .Get "src" -}}
+{{- $full := .Get "full" -}}
+{{- $label := .Get "label" -}}
+{{- $alt := .Get "alt" | default $label -}}
+{{- $span := .Get "span" | default "m" -}}
+{{- $tilt := .Get "tilt" -}}
+<figure class="frag frag--{{ $span }}{{ with $tilt }} frag--tilt-{{ . }}{{ end }}">
+    {{- with $full }}<a href="{{ . }}">{{ end -}}
+        <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+    {{- with $full }}</a>{{ end -}}
+    {{- with $label }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

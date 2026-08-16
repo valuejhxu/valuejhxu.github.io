@@ -1,34 +1,35 @@
 ---
 title: '影像'
 date: 2024-03-27
-description: '摄影作品'
+description: '摄影作品，按月份记录'
 type: 'gallery'
 aliases: ['/zh/gallery/']
 params:
     noIndent: true
 ---
 
-随手拍的一些画面。点击图片看大图。
+一些画面，按月份排。点击看大图。
 
 <!--
-  如何添加照片
-  ---------------
-  1. 每张照片准备两个文件放进 static/photos/<年份>/：
-       chengdu-01.jpg        原图   长边 2000px  质量 82  控制在 500KB 内
-       chengdu-01-thumb.jpg  缩略图 长边 700px   质量 80  控制在 90KB 内
+  加照片
+  ------
+  1. 两个文件放进 static/photos/<年份>/：
+       chengdu-01.jpg        原图   长边 2000px  质量 82  ≤500KB
+       chengdu-01-thumb.jpg  缩略图 长边 700px   质量 80  ≤90KB
+     生成命令见 .github/PHOTOS.md
 
-     用 ImageMagick 生成（在 static/photos/<年份>/ 目录下执行）：
-       magick chengdu-01.jpg -resize 2000x2000\> -quality 82 chengdu-01.jpg
-       magick chengdu-01.jpg -resize 700x700\>   -quality 80 chengdu-01-thumb.jpg
+  2. 按月份分区块，新的月份放最上面：
+       {{</* photos month="2024 · 5月" */>}}
+       {{</* photo src="缩略图" full="原图" label="说明" span="l" tilt="r" */>}}
+       {{</* /photos */>}}
 
-  2. 在下面的 pin 区块里加一行，img 用缩略图，url 指向原图：
-       {{</* pin img="/photos/2024/chengdu-01-thumb.jpg" url="/photos/2024/chengdu-01.jpg" label="成都 · 玉林" */>}}
-
-  说明：img/url 也接受外部图床的完整 URL，想用图床随时可以混着写。
-  主题不做任何图片处理，所以缩略图必须自己压好，否则一页几十张原图会很慢。
+     span 控制宽度档位 s / m / l，tilt 控制轻微倾斜 l / r。
+     交替使用不同的 span 和 tilt 就能形成错落效果，不必每张都写。
+     src/full 也接受外部图床的完整 URL。
 -->
 
-{{< pin "begin" >}}
-{{< pin img="/images/camera_sensor.svg" url="/images/camera_sensor.svg" label="示例 · 把这里换成你的照片" >}}
-{{< pin img="/images/sinusoidal_pe.svg" url="/images/sinusoidal_pe.svg" label="示例 · 删掉这两条即可" >}}
-{{< pin "end" >}}
+{{< photos month="2024 · 3月" >}}
+{{< photo src="/images/camera_sensor.svg" full="/images/camera_sensor.svg" label="示例 · 换成你的照片" span="l" tilt="l" >}}
+{{< photo src="/images/sinusoidal_pe.svg" full="/images/sinusoidal_pe.svg" label="示例 · 删掉即可" span="s" >}}
+{{< photo src="/images/camera_sensor.svg" full="/images/camera_sensor.svg" label="示例 · 错落排布" span="m" tilt="r" >}}
+{{< /photos >}}

@@ -1,0 +1,38 @@
+{{- /*
+    timeline.html — 首页右侧「发现话题」下方的时间线
+
+    按年 → 月分组列出全部已发布文章，只显示标题与日期，作为主 feed 之外的
+    一个快速纵览入口。站点级 partial，主题里没有同名文件，不会冲突。
+
+    参数：
+      limit  可选，最多列出多少篇（默认 30，避免侧栏过长）
+*/ -}}
+{{- $limit := .limit | default 30 -}}
+{{- $pages := where site.RegularPages "Type" "post" -}}
+{{- $pages = first $limit $pages -}}
+{{- with $pages }}
+<div id="timeline">
+    <header class="section-title">
+        <strong>时间线</strong>
+    </header>
+    {{- range .GroupByDate "2006" }}
+        <div class="timeline__year">
+            <strong class="timeline__year-label">{{ .Key }}</strong>
+            {{- range .Pages.GroupByDate "1月" }}
+                <div class="timeline__month">
+                    <span class="timeline__month-label">{{ .Key }}</span>
+                    <ul class="timeline__list">
+                        {{- range .Pages }}
+                            <li>
+                                <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02" }}</time>
+                            </li>
+                        {{- end }}
+                    </ul>
+                </div>
+            {{- end }}
+        </div>
+    {{- end }}
+    <a class="tr" href="{{ "/post/" | relLangURL }}">查看全部文章</a>
+</div>
+{{- end }}
