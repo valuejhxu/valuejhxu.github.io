@@ -1,3 +1,6 @@
+## Single-language site (Chinese). The content lives under content/zh via contentDir,
+## while defaultContentLanguageInSubdir = false in hugo.toml publishes it at the site
+## root (/post/... rather than /zh/post/...).
 [zh]
     contentDir = 'content/zh'
     disabled = false
@@ -14,21 +17,3 @@
         category = 'categories'
         series = 'series'
         tag = 'tags'
-
-[en]
-    contentDir = 'content/en'
-    disabled = false
-    languageCode = 'en-US'
-    languageDirection = 'ltr'
-    languageName = 'English'
-    weight = 2
-    [en.pagination]
-        disableAliases = false
-        pagerSize = 12
-        path = 'page'
-    [en.taxonomies]
-        author = 'author'
-        category = 'categories'
-        series = 'series'
-        tag = 'tags'
-

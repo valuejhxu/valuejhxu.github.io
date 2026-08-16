@@ -1,0 +1,21 @@
+# Normalise line endings to LF in the repository
+* text=auto eol=lf
+
+# Binary assets — never touch
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+*.gif  binary
+*.webp binary
+*.ico  binary
+*.woff  binary
+*.woff2 binary
+*.pdf  binary
+
+# Text assets that should stay LF
+*.svg text eol=lf
+*.css text eol=lf
+*.js  text eol=lf
+*.md  text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf

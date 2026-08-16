@@ -6,12 +6,14 @@ title = 'Valuejhxu'
 theme = 'hugo-brewm'
 ## Enable Git information for pages, (e.g. lastMod date information)
 enableGitInfo = false
-## Convert all URLs to absolute URLs
-canonifyURLs = true
+## NOTE: canonifyURLs is deliberately NOT set. It rewrites every in-content relative URL
+## to absolute at render time, which bakes whatever baseURL was active into the output —
+## that is how a previous manual build published a site full of http://localhost:1313
+## links. The deploy workflow passes --baseURL, so absolute asset URLs work without it.
 ## Default language for content
 defaultContentLanguage = 'zh'
-## Put default language in subdirectory
-defaultContentLanguageInSubdir = true
+## Publish the single language at the site root (/post/...) instead of /zh/post/...
+defaultContentLanguageInSubdir = false
 ## Show placeholder for missing translations
 enableMissingTranslationPlaceholders = true
 ## Use sections for main menu
@@ -66,6 +68,15 @@ copyright = 'Copyright 2024-2026 Valuejhxu'
         [markup.goldmark.renderer]
             ## Allow HTML in markdown
             unsafe = true
+        ## Hand math to the render hook at layouts/_default/_markup/render-passthrough.html,
+        ## which renders it to MathML/HTML at build time via transform.ToMath and sets
+        ## the per-page "hasMath" flag the theme uses to decide whether to load KaTeX CSS.
+        ## NOTE: inline '$' is active site-wide — escape literal dollar amounts as \$
+        [markup.goldmark.extensions.passthrough]
+            enable = true
+            [markup.goldmark.extensions.passthrough.delimiters]
+                block = [['\[', '\]'], ['$$', '$$'], ['\begin{equation}', '\end{equation}'], ['\begin{align}', '\end{align}']]
+                inline = [['\(', '\)'], ['$', '$']]
 
 ## Sitemap configuration
 [sitemap]
@@ -104,8 +115,9 @@ copyright = 'Copyright 2024-2026 Valuejhxu'
     enableRobotsTXT = true
     ## Enable extended metadata (social cards)
     extMeta = true
-    ## Enable coffee metric
-    coffeeStat = true
+    ## Coffee metric is a theme easter egg ("this site took N cups of coffee");
+    ## it reads awkwardly in Chinese, so it stays off.
+    coffeeStat = false
 
     ## Author information
     [params.author]
@@ -190,8 +202,9 @@ copyright = 'Copyright 2024-2026 Valuejhxu'
     [params.socialCard]
         ## Enable twitter and opengraph social cards (same .params.extMeta setting)
         enable = true
-        ## Default social card image
-        images = "https://repository-images.githubusercontent.com/923527728/46a32a19-69ac-45b3-91a4-c4d299fb234b" ## recommended resolution: 1200 x 630px
+        ## Default social card image, recommended resolution: 1200 x 630px.
+        ## Add static/images/social-card.png and point this at it to get link previews.
+        # images = "/images/social-card.png"
 
         ## Enable Twitter cards
         # twitter = true

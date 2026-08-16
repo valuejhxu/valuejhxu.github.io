@@ -1,37 +1,34 @@
 ---
-type: 'slide'
-title: '图库'
+title: '影像'
+date: 2024-03-27
+description: '摄影作品'
+type: 'gallery'
+aliases: ['/zh/gallery/']
 params:
-    headless: true
-    target: 'https://github.com/valuejhxu/blog'
+    noIndent: true
 ---
 
-这是一个使用 `{{</* pin */>}}` 短代码的幻灯片。
+随手拍的一些画面。点击图片看大图。
 
-## 作品展示（示例）
+<!--
+  如何添加照片
+  ---------------
+  1. 每张照片准备两个文件放进 static/photos/<年份>/：
+       chengdu-01.jpg        原图   长边 2000px  质量 82  控制在 500KB 内
+       chengdu-01-thumb.jpg  缩略图 长边 700px   质量 80  控制在 90KB 内
 
-使用 `Pin` 短代码的区块。
-项目按列排序显示。
-如果图片不是正方形，布局将以瀑布流方式显示。
+     用 ImageMagick 生成（在 static/photos/<年份>/ 目录下执行）：
+       magick chengdu-01.jpg -resize 2000x2000\> -quality 82 chengdu-01.jpg
+       magick chengdu-01.jpg -resize 700x700\>   -quality 80 chengdu-01-thumb.jpg
+
+  2. 在下面的 pin 区块里加一行，img 用缩略图，url 指向原图：
+       {{</* pin img="/photos/2024/chengdu-01-thumb.jpg" url="/photos/2024/chengdu-01.jpg" label="成都 · 玉林" */>}}
+
+  说明：img/url 也接受外部图床的完整 URL，想用图床随时可以混着写。
+  主题不做任何图片处理，所以缩略图必须自己压好，否则一页几十张原图会很慢。
+-->
 
 {{< pin "begin" >}}
-{{< pin img="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/1.svg" label="项目 1">}}
-{{< pin img="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/2.svg" label="项目 2">}}
-{{< pin img="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/3.svg" label="项目 3">}}
-{{< pin img="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/4.svg" label="项目 4">}}
-{{< pin img="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/5.svg" label="项目 5">}}
-{{< pin img="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/6.svg" label="项目 6">}}
+{{< pin img="/images/camera_sensor.svg" url="/images/camera_sensor.svg" label="示例 · 把这里换成你的照片" >}}
+{{< pin img="/images/sinusoidal_pe.svg" url="/images/sinusoidal_pe.svg" label="示例 · 删掉这两条即可" >}}
 {{< pin "end" >}}
-
-## 产品目录（示例）
-
-带有 `quote` 参数的 `{{</* pin */>}}` 短代码。
-
-{{< pin "begin" >}}
-{{< pin img="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/7.svg" label="产品 1" url="#商城" quote="<s>￥299</s> ￥199" >}}
-{{< pin img="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/8.svg" label="产品 2" url="#商城" quote="<s>￥399</s> ￥299" >}}
-{{< pin img="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/9.svg" label="产品 3" url="#商城" quote="获取报价" >}}
-{{< pin img="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/10.svg" label="产品 4" url="#商城" quote="<s>￥299</s> ￥199" >}}
-{{< pin img="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/11.svg" label="产品 5" url="#商城" quote="<s>￥399</s> ￥299" >}}
-{{< pin img="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/12.svg" label="产品 6" url="#商城" quote="缺货" >}}
-{{< pin "end" >}} 

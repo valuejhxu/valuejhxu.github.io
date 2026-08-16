@@ -1,21 +1,30 @@
+## Main navigation — the three pillars plus the archive.
 [[main]]
-  name       = '分类'
-  identifier = 'categories'
-  pageRef    = '/categories'
+  name       = '大模型'
+  identifier = 'llm'
+  pageRef    = '/post/llm'
   weight     = 1
+  Post       = 'LLM 学习笔记'
 
 [[main]]
-  name       = '标签'
-  identifier = 'tags'
-  pageRef    = '/tags'
+  name       = '影像'
+  identifier = 'gallery'
+  pageRef    = '/gallery'
   weight     = 2
+  Post       = '摄影作品'
 
 [[main]]
-  name       = 'GitHub'
-  identifier = 'github'
+  name       = '便签墙'
+  identifier = 'notes'
+  pageRef    = '/notes'
   weight     = 3
-  url        = 'https://github.com/valuejhxu'
-  pre        = 'github'
+  Post       = '短想法与摘录'
+
+[[main]]
+  name       = '归档'
+  identifier = 'post'
+  pageRef    = '/post'
+  weight     = 4
 
 [[more]]
   name       = '关于'
@@ -24,10 +33,22 @@
   weight     = 1
 
 [[more]]
-  name       = '作者'
-  identifier = 'author'
-  pageRef    = '/author'
+  name       = '系列'
+  identifier = 'series'
+  pageRef    = '/series'
   weight     = 2
+
+[[more]]
+  name       = '分类'
+  identifier = 'categories'
+  pageRef    = '/categories'
+  weight     = 3
+
+[[more]]
+  name       = '标签'
+  identifier = 'tags'
+  pageRef    = '/tags'
+  weight     = 4
 
 [[footer]]
   identifier = 'github'
@@ -40,5 +61,29 @@
   identifier = 'email'
   url        = 'mailto:valuejhxu@gmail.com'
   weight     = 2
-  name       = 'email'
+  name       = 'Email'
+  pre        = 'email'
+
+[[footer]]
+  identifier = 'rss'
+  pageRef    = '/index.xml'
+  weight     = 3
+  name       = 'RSS'
+  pre        = 'rss'
+
+## Per-author social links. The menu name must equal `urlize` of the author term's title:
+## content/zh/author/valuejhxu/_index.md has title 'Valuejhxu', hence 'valuejhxu'.
+## See the theme's partials/bundles/branch.html — $author := urlize .Title
+[[valuejhxu]]
+  identifier = 'github'
+  url        = 'https://github.com/valuejhxu'
+  weight     = 1
+  name       = 'GitHub'
+  pre        = 'github'
+
+[[valuejhxu]]
+  identifier = 'email'
+  url        = 'mailto:valuejhxu@gmail.com'
+  weight     = 2
+  name       = 'Email'
   pre        = 'email'

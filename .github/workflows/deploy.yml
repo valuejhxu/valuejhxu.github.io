@@ -50,6 +50,11 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
 
+      # Required: params.search.pagefind = true makes the theme request
+      # /pagefind/pagefind-ui.js, which 404s unless the index is generated here.
+      - name: Index with Pagefind
+        run: npx -y pagefind@latest --site ./public
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

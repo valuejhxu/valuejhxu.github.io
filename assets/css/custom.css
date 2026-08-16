@@ -1,0 +1,53 @@
+/*
+    Site-level custom.css
+
+    IMPORTANT: this file SHADOWS themes/hugo-brewm/assets/css/custom.css — Hugo's union
+    filesystem resolves `resources.Get "css/custom.css"` (theme's layouts/partials/head/css.html)
+    to this copy rather than merging the two. The :root block below is therefore copied
+    verbatim from the theme; deleting it would drop the highlight colour site-wide.
+    Keep it when adding rules, and re-check it after any `git submodule update` of the theme.
+*/
+
+:root {
+    /* mark & selector highlight color */
+    --hl: yellow;
+}
+
+/*
+    便签墙 (/notes/) — styles the `note` shortcode in layouts/shortcodes/note.html.
+    Only theme-provided custom properties are used, so the light/dark and contrast
+    toggles keep working.
+*/
+.column.pin > .note {
+    border-left: 2px solid var(--mid);
+    padding-left: 1ex;
+    font-size: var(--small);
+}
+
+.note__label {
+    display: block;
+    margin-bottom: .5ex;
+    color: var(--mid);
+    font-style: normal;
+    font-variant-numeric: tabular-nums;
+}
+
+/* the theme indents the first line of prose paragraphs; notes read better flush left */
+.note__body > p {
+    text-indent: unset;
+}
+
+.note__body > p:last-child {
+    margin-bottom: 0;
+}
+
+.note__body > blockquote {
+    margin: 1ex 0 0;
+    color: var(--mid);
+}
+
+.note__link {
+    display: inline-block;
+    margin-top: .5ex;
+    text-decoration: none;
+}

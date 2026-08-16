@@ -1,0 +1,30 @@
+{{- /*
+    note — a single sticky note for the 便签墙 (/notes/).
+
+    Wrap a group of these in the theme's pin "begin" / pin "end" shortcodes to get its
+    CSS-columns masonry (see themes/hugo-brewm/assets/css/component/column.css).
+
+    Call this with the angle-bracket form. The body is markdown and is rendered
+    explicitly below via RenderString, so the percent form must NOT be used — with it
+    Hugo re-parses this template's own output as markdown and the indented closing
+    tags below turn into code blocks.
+
+    Why not the theme's `pin` shortcode with a quote= param? Three reasons:
+      1. its quote branch always emits an anchor, so a note without a url gets href=""
+         and clicking it reloads the page;
+      2. column.css right-aligns .has-quote > div — correct for the price tags it was
+         designed for, wrong for prose;
+      3. that markup/CSS contract changed between theme versions, and the theme is a
+         submodule we intend to keep updating.
+
+    Params:
+      label  optional — shown above the body, typically a date
+      url    optional — renders a small arrow link
+*/ -}}
+{{- $label := .Get "label" -}}
+{{- $url := .Get "url" -}}
+<div class="note">
+{{- with $label }}<strong class="note__label">{{ . }}</strong>{{ end }}
+<div class="note__body">{{ .Inner | .Page.RenderString }}</div>
+{{- with $url }}<a class="note__link" href="{{ . }}">↗</a>{{ end }}
+</div>

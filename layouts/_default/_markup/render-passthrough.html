@@ -1,0 +1,19 @@
+{{- /*
+    Math render hook — copied verbatim from themes/hugo-brewm/layouts/_markup/render-passthrough.html
+
+    Why this copy exists: the theme ships this hook at layouts/_markup/, the path Hugo
+    0.146+ resolves. CI pins Hugo 0.145.0, which only looks under layouts/_default/_markup/,
+    so the theme's own copy never fires and math renders as raw LaTeX. Keeping the copy
+    here rather than patching the theme leaves the submodule clean.
+
+    Delete this file once HUGO_VERSION in .github/workflows/deploy.yml is >= 0.146.0.
+*/ -}}
+{{- $opts := dict "output" "htmlAndMathml" "displayMode" (eq .Type "block") }}
+{{- with try (transform.ToMath .Inner $opts) }}
+    {{- with .Err }}
+        {{- errorf "Unable to render mathematical markup to HTML using the transform.ToMath function. The KaTeX display engine threw the following error: %s: see %s." . $.Position }}
+    {{- else }}
+        {{- .Value }}
+        {{- $.Page.Store.Set "hasMath" true }}
+    {{- end }}
+{{- end -}}
